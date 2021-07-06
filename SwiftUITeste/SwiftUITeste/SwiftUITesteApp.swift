@@ -11,7 +11,7 @@ import SwiftUI
 struct SwiftUITesteApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeTabView()
         }
     }
 }
