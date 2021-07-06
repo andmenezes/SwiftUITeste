@@ -8,14 +8,23 @@
 import SwiftUI
 
 struct UpcomingView: View {
+    
+    @State var showingCreateView = false
+    
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("Próximos")
             .navigationTitle("Próximos")
             .navigationBarItems(trailing:
-                                    Button(action: {}) {
+                                    Button(action: {
+                                        self.showingCreateView = true
+                                    }) {
                                         Image(systemName: "calendar.badge.plus")
                                             .font(.title)
                                     }
+                                    .sheet(isPresented: $showingCreateView, content: {
+                                        CreateNewEventView()
+                                    })
                                 
                                 
             )

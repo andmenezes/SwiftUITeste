@@ -14,6 +14,7 @@
 		BCD781062694D553003D3D9A /* SwiftUITesteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD781052694D553003D3D9A /* SwiftUITesteTests.swift */; };
 		BCD781112694D553003D3D9A /* SwiftUITesteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD781102694D553003D3D9A /* SwiftUITesteUITests.swift */; };
 		BCD7811F2694D6F8003D3D9A /* UpcomingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD7811E2694D6F8003D3D9A /* UpcomingView.swift */; };
+		BCD781212694DCEF003D3D9A /* CreateNewEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD781202694DCEF003D3D9A /* CreateNewEventView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		BCD781102694D553003D3D9A /* SwiftUITesteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUITesteUITests.swift; sourceTree = "<group>"; };
 		BCD781122694D553003D3D9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCD7811E2694D6F8003D3D9A /* UpcomingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingView.swift; sourceTree = "<group>"; };
+		BCD781202694DCEF003D3D9A /* CreateNewEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewEventView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				BCD780F32694D54F003D3D9A /* SwiftUITesteApp.swift */,
 				BCD780F52694D54F003D3D9A /* HomeTabView.swift */,
 				BCD7811E2694D6F8003D3D9A /* UpcomingView.swift */,
+				BCD781202694DCEF003D3D9A /* CreateNewEventView.swift */,
 				BCD780F72694D553003D3D9A /* Assets.xcassets */,
 				BCD780FC2694D553003D3D9A /* Info.plist */,
 				BCD780F92694D553003D3D9A /* Preview Content */,
@@ -265,6 +268,7 @@
 				BCD780F62694D54F003D3D9A /* HomeTabView.swift in Sources */,
 				BCD780F42694D54F003D3D9A /* SwiftUITesteApp.swift in Sources */,
 				BCD7811F2694D6F8003D3D9A /* UpcomingView.swift in Sources */,
+				BCD781212694DCEF003D3D9A /* CreateNewEventView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
