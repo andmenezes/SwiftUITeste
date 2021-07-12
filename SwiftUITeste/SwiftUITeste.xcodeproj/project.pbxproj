@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BCD3350E269C79E400FD0013 /* EventTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD3350D269C79E400FD0013 /* EventTileView.swift */; };
 		BCD780F42694D54F003D3D9A /* SwiftUITesteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD780F32694D54F003D3D9A /* SwiftUITesteApp.swift */; };
 		BCD780F62694D54F003D3D9A /* HomeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD780F52694D54F003D3D9A /* HomeTabView.swift */; };
 		BCD780F82694D553003D3D9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCD780F72694D553003D3D9A /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BCD3350D269C79E400FD0013 /* EventTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTileView.swift; sourceTree = "<group>"; };
 		BCD780F02694D54F003D3D9A /* SwiftUITeste.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUITeste.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCD780F32694D54F003D3D9A /* SwiftUITesteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUITesteApp.swift; sourceTree = "<group>"; };
 		BCD780F52694D54F003D3D9A /* HomeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabView.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				BCD781242694E78D003D3D9A /* EventLabelView.swift */,
 				BCE6096F2695BFBA00C3E4A0 /* ImagePickerSwiftUIHelper.swift */,
 				BCD781222694E025003D3D9A /* EventEntity.swift */,
+				BCD3350D269C79E400FD0013 /* EventTileView.swift */,
 				BCD780F72694D553003D3D9A /* Assets.xcassets */,
 				BCD780FC2694D553003D3D9A /* Info.plist */,
 				BCD780F92694D553003D3D9A /* Preview Content */,
@@ -275,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCD780F62694D54F003D3D9A /* HomeTabView.swift in Sources */,
+				BCD3350E269C79E400FD0013 /* EventTileView.swift in Sources */,
 				BCD781232694E025003D3D9A /* EventEntity.swift in Sources */,
 				BCD781252694E78D003D3D9A /* EventLabelView.swift in Sources */,
 				BCD780F42694D54F003D3D9A /* SwiftUITesteApp.swift in Sources */,

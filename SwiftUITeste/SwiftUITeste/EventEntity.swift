@@ -8,7 +8,8 @@
 import Foundation
 import SwiftUI
 
-class EventEntity: ObservableObject {
+class EventEntity: ObservableObject, Identifiable {
+    var id: UUID = UUID()
     var date: Date = Date()
     var title: String = ""
     var url: String = ""
@@ -21,5 +22,32 @@ class EventEntity: ObservableObject {
             return Image(uiImage: uiImage)
         }
         return nil
+    }
+}
+
+extension EventEntity {
+    static var testEvent1: EventEntity {
+        let event = EventEntity()
+        
+        event.title = "WWDC 2020"
+        event.date = Date()
+        event.color = .green
+        event.url = "www.apple.com"
+        
+        if let image = UIImage(named: "wwdc"), let data = image.pngData() {
+            event.imageData = data
+        }
+        
+        return event
+    }
+    
+    static var testEvent2: EventEntity {
+        let event = EventEntity()
+        
+        event.title = "Viagem em familia para Ilha bela depois vamos para o Rio de Janeiro"
+        event.date = Date()
+        event.color = .blue
+
+        return event
     }
 }
