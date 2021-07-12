@@ -11,9 +11,11 @@ struct CreateNewEventView: View {
     
     @StateObject var event: EventEntity = EventEntity()
     @State var showTimeOfEvent: Bool = false
+    @State var showImagePicker: Bool = false
     
     var body: some View {
         Form{
+            
             Section {
                 EventLabelView(title: "Nome do Evento",
                                image: Image(systemName: "keyboard"),
@@ -31,13 +33,62 @@ struct CreateNewEventView: View {
                 
                 DatePicker("Data do Evento",
                            selection: $event.date,
-                           displayedComponents: self.showTimeOfEvent ? [.date, .hourAndMinute] : [.date])
+                           displayedComponents: self.datePickerComponentsToShow())
                     .datePickerStyle(GraphicalDatePickerStyle())
                 Toggle(isOn: $showTimeOfEvent) {
                     EventLabelView(title: "Hora do Evento",
                                    image: Image(systemName: "clock.fill"),
                                    backgroundColor: .blue)
                 }
+            }
+            
+            Section {
+                
+                if let image = self.event.image() {
+                    HStack {
+                        EventLabelView(title: "",
+                                       image: Image(systemName: "camera"),
+                                       backgroundColor: .purple)
+                        
+                        Spacer()
+                        
+                        Button(action: {
+                            self.event.imageData = nil
+                            self.showImagePicker = false
+                        }){
+                            Text("Remover Imagem")
+                                .foregroundColor(.red)
+                        }
+                        .buttonStyle(BorderlessButtonStyle()) //Arruma um Bug no swiftUI de ao tocare em um botão numa Section outros botões na mesma section dispara suas actions tbm
+                    }
+        
+                    Button(action: {
+                        self.showImagePicker = true
+                    }){
+                        image
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                        
+                    }
+                    .buttonStyle(BorderlessButtonStyle()) //Arruma um Bug no swiftUI de ao tocare em um botão numa Section outros botões na mesma section dispara suas actions tbm
+                }else {
+                    HStack {
+                        EventLabelView(title: "",
+                                       image: Image(systemName: "camera"),
+                                       backgroundColor: .purple)
+                        
+                        Spacer()
+                        
+                        Button(action: {
+                            self.showImagePicker = true
+                        }){
+                            Text("Selecione uma imagem")
+                        }
+                    }
+                }
+                
+            }.sheet(isPresented: $showImagePicker) {
+                ImagePickerUISwiftHelper(imageDate: $event.imageData)
             }
             
             Section {
@@ -58,6 +109,12 @@ struct CreateNewEventView: View {
             }
         }
         
+    }
+}
+
+extension CreateNewEventView {
+    func datePickerComponentsToShow() -> DatePickerComponents {
+        return self.showTimeOfEvent ? [.date, .hourAndMinute] : [.date]
     }
 }
 

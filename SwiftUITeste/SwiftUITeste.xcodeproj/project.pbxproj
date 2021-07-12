@@ -17,6 +17,7 @@
 		BCD781212694DCEF003D3D9A /* CreateNewEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD781202694DCEF003D3D9A /* CreateNewEventView.swift */; };
 		BCD781232694E025003D3D9A /* EventEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD781222694E025003D3D9A /* EventEntity.swift */; };
 		BCD781252694E78D003D3D9A /* EventLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD781242694E78D003D3D9A /* EventLabelView.swift */; };
+		BCE609702695BFBA00C3E4A0 /* ImagePickerSwiftUIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE6096F2695BFBA00C3E4A0 /* ImagePickerSwiftUIHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		BCD781202694DCEF003D3D9A /* CreateNewEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewEventView.swift; sourceTree = "<group>"; };
 		BCD781222694E025003D3D9A /* EventEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventEntity.swift; sourceTree = "<group>"; };
 		BCD781242694E78D003D3D9A /* EventLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventLabelView.swift; sourceTree = "<group>"; };
+		BCE6096F2695BFBA00C3E4A0 /* ImagePickerSwiftUIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerSwiftUIHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				BCD7811E2694D6F8003D3D9A /* UpcomingView.swift */,
 				BCD781202694DCEF003D3D9A /* CreateNewEventView.swift */,
 				BCD781242694E78D003D3D9A /* EventLabelView.swift */,
+				BCE6096F2695BFBA00C3E4A0 /* ImagePickerSwiftUIHelper.swift */,
 				BCD781222694E025003D3D9A /* EventEntity.swift */,
 				BCD780F72694D553003D3D9A /* Assets.xcassets */,
 				BCD780FC2694D553003D3D9A /* Info.plist */,
@@ -275,6 +278,7 @@
 				BCD781232694E025003D3D9A /* EventEntity.swift in Sources */,
 				BCD781252694E78D003D3D9A /* EventLabelView.swift in Sources */,
 				BCD780F42694D54F003D3D9A /* SwiftUITesteApp.swift in Sources */,
+				BCE609702695BFBA00C3E4A0 /* ImagePickerSwiftUIHelper.swift in Sources */,
 				BCD7811F2694D6F8003D3D9A /* UpcomingView.swift in Sources */,
 				BCD781212694DCEF003D3D9A /* CreateNewEventView.swift in Sources */,
 			);

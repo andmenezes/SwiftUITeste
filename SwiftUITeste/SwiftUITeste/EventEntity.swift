@@ -13,5 +13,13 @@ class EventEntity: ObservableObject {
     var title: String = ""
     var url: String = ""
     var color: Color = Color.purple
-    var imageData: Data?
+    @Published var imageData: Data?
+    
+    func image() -> Image? {
+        
+        if let imageData = self.imageData, let uiImage = UIImage(data: imageData) {
+            return Image(uiImage: uiImage)
+        }
+        return nil
+    }
 }
