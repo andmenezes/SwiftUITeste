@@ -15,19 +15,19 @@ struct EventTileView: View {
         
         VStack(spacing: 0) {
             
-            if let imageData = event.imageData, let uiImage = UIImage(data: imageData) , let image = Image(uiImage: uiImage) {
+            if let imageData = self.event.imageData, let uiImage = UIImage(data: imageData) , let image = Image(uiImage: uiImage) {
                 image
                     .resizable()
                     .aspectRatio(contentMode: .fit)
             }
             
             Rectangle()
-                .foregroundColor(event.color)
+                .foregroundColor(self.event.color)
                 .frame(height: 15)
             
             
             HStack {
-                Text(event.title)
+                Text(self.event.title)
                     .font(.title)
                     .padding(10)
                 Spacer()
@@ -38,11 +38,11 @@ struct EventTileView: View {
                 Image(systemName: "calendar")
                     .foregroundColor(.red)
                 
-                Text("4 Setembro")
+                Text(self.event.dateAsString())
                     
                 Spacer()
                 
-                Text("Próximo Mês")
+                Text(self.event.timeFromNow())
                     
                 Image(systemName: "clock.fill")
                     .foregroundColor(.blue)

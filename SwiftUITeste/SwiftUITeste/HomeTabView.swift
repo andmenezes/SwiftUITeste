@@ -22,7 +22,9 @@ struct HomeTabView: View {
                     Image(systemName: "magnifyingglass")
                     Text("Descubra")
                 }
-            Text("Hello 3")
+            NavigationView{
+                PastEventsView()
+            }
                 .tabItem {
                     Image(systemName: "gobackward")
                     Text("Passado")

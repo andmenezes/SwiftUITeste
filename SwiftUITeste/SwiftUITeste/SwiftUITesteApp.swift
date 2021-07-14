@@ -12,6 +12,9 @@ struct SwiftUITesteApp: App {
     var body: some Scene {
         WindowGroup {
             HomeTabView()
+                .onAppear(perform: {
+                    DataController.shared.loadData()
+                })
         }
     }
 }

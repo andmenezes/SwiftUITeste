@@ -3,11 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC2BE5A7269DB2A5003C57B1 /* EventsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2BE5A6269DB2A5003C57B1 /* EventsListView.swift */; };
+		BC2BE5A9269DBB2C003C57B1 /* PastEventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2BE5A8269DBB2C003C57B1 /* PastEventsView.swift */; };
 		BCD3350E269C79E400FD0013 /* EventTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD3350D269C79E400FD0013 /* EventTileView.swift */; };
+		BCD33514269C89A700FD0013 /* SwiftDate in Frameworks */ = {isa = PBXBuildFile; productRef = BCD33513269C89A700FD0013 /* SwiftDate */; };
+		BCD33516269CA5B900FD0013 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD33515269CA5B900FD0013 /* DataController.swift */; };
+		BCD33519269CB6A900FD0013 /* UIColor_Hex_Swift in Frameworks */ = {isa = PBXBuildFile; productRef = BCD33518269CB6A900FD0013 /* UIColor_Hex_Swift */; };
 		BCD780F42694D54F003D3D9A /* SwiftUITesteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD780F32694D54F003D3D9A /* SwiftUITesteApp.swift */; };
 		BCD780F62694D54F003D3D9A /* HomeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD780F52694D54F003D3D9A /* HomeTabView.swift */; };
 		BCD780F82694D553003D3D9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCD780F72694D553003D3D9A /* Assets.xcassets */; };
@@ -39,7 +44,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BC2BE5A6269DB2A5003C57B1 /* EventsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsListView.swift; sourceTree = "<group>"; };
+		BC2BE5A8269DBB2C003C57B1 /* PastEventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastEventsView.swift; sourceTree = "<group>"; };
 		BCD3350D269C79E400FD0013 /* EventTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTileView.swift; sourceTree = "<group>"; };
+		BCD33515269CA5B900FD0013 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		BCD780F02694D54F003D3D9A /* SwiftUITeste.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUITeste.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCD780F32694D54F003D3D9A /* SwiftUITesteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUITesteApp.swift; sourceTree = "<group>"; };
 		BCD780F52694D54F003D3D9A /* HomeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabView.swift; sourceTree = "<group>"; };
@@ -64,6 +72,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCD33519269CB6A900FD0013 /* UIColor_Hex_Swift in Frameworks */,
+				BCD33514269C89A700FD0013 /* SwiftDate in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +94,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BCD3350F269C86AA00FD0013 /* SwiftUIViews */ = {
+			isa = PBXGroup;
+			children = (
+				BCD7811E2694D6F8003D3D9A /* UpcomingView.swift */,
+				BC2BE5A8269DBB2C003C57B1 /* PastEventsView.swift */,
+				BCD781202694DCEF003D3D9A /* CreateNewEventView.swift */,
+				BCD781242694E78D003D3D9A /* EventLabelView.swift */,
+				BCD3350D269C79E400FD0013 /* EventTileView.swift */,
+				BC2BE5A6269DB2A5003C57B1 /* EventsListView.swift */,
+			);
+			path = SwiftUIViews;
+			sourceTree = "<group>";
+		};
+		BCD33510269C86DF00FD0013 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				BCE6096F2695BFBA00C3E4A0 /* ImagePickerSwiftUIHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		BCD33511269C86EC00FD0013 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				BCD781222694E025003D3D9A /* EventEntity.swift */,
+				BCD33515269CA5B900FD0013 /* DataController.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
 		BCD780E72694D54F003D3D9A = {
 			isa = PBXGroup;
 			children = (
@@ -109,12 +149,9 @@
 			children = (
 				BCD780F32694D54F003D3D9A /* SwiftUITesteApp.swift */,
 				BCD780F52694D54F003D3D9A /* HomeTabView.swift */,
-				BCD7811E2694D6F8003D3D9A /* UpcomingView.swift */,
-				BCD781202694DCEF003D3D9A /* CreateNewEventView.swift */,
-				BCD781242694E78D003D3D9A /* EventLabelView.swift */,
-				BCE6096F2695BFBA00C3E4A0 /* ImagePickerSwiftUIHelper.swift */,
-				BCD781222694E025003D3D9A /* EventEntity.swift */,
-				BCD3350D269C79E400FD0013 /* EventTileView.swift */,
+				BCD3350F269C86AA00FD0013 /* SwiftUIViews */,
+				BCD33511269C86EC00FD0013 /* Entities */,
+				BCD33510269C86DF00FD0013 /* Helpers */,
 				BCD780F72694D553003D3D9A /* Assets.xcassets */,
 				BCD780FC2694D553003D3D9A /* Info.plist */,
 				BCD780F92694D553003D3D9A /* Preview Content */,
@@ -164,6 +201,10 @@
 			dependencies = (
 			);
 			name = SwiftUITeste;
+			packageProductDependencies = (
+				BCD33513269C89A700FD0013 /* SwiftDate */,
+				BCD33518269CB6A900FD0013 /* UIColor_Hex_Swift */,
+			);
 			productName = SwiftUITeste;
 			productReference = BCD780F02694D54F003D3D9A /* SwiftUITeste.app */;
 			productType = "com.apple.product-type.application";
@@ -235,6 +276,10 @@
 				Base,
 			);
 			mainGroup = BCD780E72694D54F003D3D9A;
+			packageReferences = (
+				BCD33512269C89A700FD0013 /* XCRemoteSwiftPackageReference "SwiftDate" */,
+				BCD33517269CB6A900FD0013 /* XCRemoteSwiftPackageReference "UIColor-Hex-Swift" */,
+			);
 			productRefGroup = BCD780F12694D54F003D3D9A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -278,12 +323,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCD780F62694D54F003D3D9A /* HomeTabView.swift in Sources */,
+				BC2BE5A7269DB2A5003C57B1 /* EventsListView.swift in Sources */,
 				BCD3350E269C79E400FD0013 /* EventTileView.swift in Sources */,
 				BCD781232694E025003D3D9A /* EventEntity.swift in Sources */,
 				BCD781252694E78D003D3D9A /* EventLabelView.swift in Sources */,
+				BCD33516269CA5B900FD0013 /* DataController.swift in Sources */,
 				BCD780F42694D54F003D3D9A /* SwiftUITesteApp.swift in Sources */,
 				BCE609702695BFBA00C3E4A0 /* ImagePickerSwiftUIHelper.swift in Sources */,
 				BCD7811F2694D6F8003D3D9A /* UpcomingView.swift in Sources */,
+				BC2BE5A9269DBB2C003C57B1 /* PastEventsView.swift in Sources */,
 				BCD781212694DCEF003D3D9A /* CreateNewEventView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -598,6 +646,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BCD33512269C89A700FD0013 /* XCRemoteSwiftPackageReference "SwiftDate" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/malcommac/SwiftDate.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.3.1;
+			};
+		};
+		BCD33517269CB6A900FD0013 /* XCRemoteSwiftPackageReference "UIColor-Hex-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/yeahdongcn/UIColor-Hex-Swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BCD33513269C89A700FD0013 /* SwiftDate */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BCD33512269C89A700FD0013 /* XCRemoteSwiftPackageReference "SwiftDate" */;
+			productName = SwiftDate;
+		};
+		BCD33518269CB6A900FD0013 /* UIColor_Hex_Swift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BCD33517269CB6A900FD0013 /* XCRemoteSwiftPackageReference "UIColor-Hex-Swift" */;
+			productName = UIColor_Hex_Swift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BCD780E82694D54F003D3D9A /* Project object */;
 }
