@@ -8,24 +8,23 @@
 import SwiftUI
 
 struct EventTileView: View {
-    
+
     var event: EventEntity
-    
+
     var body: some View {
-        
+
         VStack(spacing: 0) {
-            
-            if let imageData = self.event.imageData, let uiImage = UIImage(data: imageData) , let image = Image(uiImage: uiImage) {
+
+            if let imageData = self.event.imageData, let uiImage = UIImage(data: imageData), let image = Image(uiImage: uiImage) {
                 image
                     .resizable()
                     .aspectRatio(contentMode: .fit)
             }
-            
+
             Rectangle()
                 .foregroundColor(self.event.color)
                 .frame(height: 15)
-            
-            
+
             HStack {
                 Text(self.event.title)
                     .font(.title)
@@ -33,27 +32,26 @@ struct EventTileView: View {
                 Spacer()
             }
             .background(Color.white)
-            
+
             HStack {
                 Image(systemName: "calendar")
                     .foregroundColor(.red)
-                
+
                 Text(self.event.dateAsString())
-                    
+
                 Spacer()
-                
+
                 Text(self.event.timeFromNow())
-                    
+
                 Image(systemName: "clock.fill")
                     .foregroundColor(.blue)
-                
+
             }
             .font(.title3)
             .padding(.horizontal, 10)
             .padding(.bottom, 20)
             .background(Color.white)
-            
-            
+
         }
         .cornerRadius(10)
         .shadow(radius: 10)
@@ -66,5 +64,5 @@ struct EventTileView_Previews: PreviewProvider {
         EventTileView(event: EventEntity.testEvent1)
             .previewLayout(.sizeThatFits)
     }
-    
+
 }

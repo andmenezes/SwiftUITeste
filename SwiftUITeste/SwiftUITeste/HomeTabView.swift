@@ -10,7 +10,7 @@ import SwiftUI
 struct HomeTabView: View {
     var body: some View {
         TabView {
-            NavigationView{
+            NavigationView {
                 UpcomingView()
             }
             .tabItem {
@@ -22,7 +22,7 @@ struct HomeTabView: View {
                     Image(systemName: "magnifyingglass")
                     Text("Descubra")
                 }
-            NavigationView{
+            NavigationView {
                 PastEventsView()
             }
                 .tabItem {

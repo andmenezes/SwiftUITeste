@@ -8,19 +8,19 @@
 import SwiftUI
 
 struct EventLabelView: View {
-    
+
     var title: String
     var image: Image
     var backgroundColor: Color
-    
+
     var body: some View {
         Label {
             Text(self.title)
-            
+
         } icon: {
             self.image
                 .padding(4)
-                .background(self.backgroundColor) 
+                .background(self.backgroundColor)
                 .cornerRadius(7)
                 .foregroundColor(.white)
         }

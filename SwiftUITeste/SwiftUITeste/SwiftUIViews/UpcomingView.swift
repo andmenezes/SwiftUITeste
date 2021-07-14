@@ -8,14 +8,13 @@
 import SwiftUI
 
 struct UpcomingView: View {
-    
+
     @State var showingCreateView = false
     @ObservedObject var data = DataController.shared
-    
-    
+
     var body: some View {
         EventsListView(events: self.data.upcomingEvents, noEventText: "Você ainda não tem eventos para acompanhar 😥\nCrie um evento novo ou de uma olhada na aba de descobertas.")
-        
+
         .navigationTitle("Próximos Eventos")
         .navigationBarItems(trailing:
                                 Button(action: {
@@ -27,24 +26,23 @@ struct UpcomingView: View {
             .sheet(isPresented: $showingCreateView, content: {
                 CreateNewEventView()
             })
-                            
-                            
+
         )
     }
 }
 
 struct UpcomingView_Previews: PreviewProvider {
     static var previews: some View {
-        Group{
-            NavigationView{
-                
+        Group {
+            NavigationView {
+
                 UpcomingView()
             }
-            
-            NavigationView{
+
+            NavigationView {
                 UpcomingView()
             }
-            
+
         }
     }
 }

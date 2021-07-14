@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct EventsListView: View {
-    
+
     var events: [EventEntity]
     var noEventText: String
-    
+
     var body: some View {
-        ScrollView{
+        ScrollView {
             VStack {
                 if self.events.count == 0 {
 
@@ -22,12 +22,12 @@ struct EventsListView: View {
                         .multilineTextAlignment(.center)
                         .padding(.top, 300)
                         .padding(.horizontal, 20)
-                    
-                }else{
+
+                } else {
                     ForEach(self.events) { event in
                         EventTileView(event: event)
                     }
-                 
+
                 }
             }
         }
@@ -40,8 +40,8 @@ struct EventsListView_Previews: PreviewProvider {
             EventsListView(events: [EventEntity.testEvent1, EventEntity.testEvent2], noEventText: "teste")
             EventsListView(events: [], noEventText: "Nada para exibir aqui =(")
                 .previewDevice("iPhone SE (2nd generation)")
-            
+
         }
-        
+
     }
 }

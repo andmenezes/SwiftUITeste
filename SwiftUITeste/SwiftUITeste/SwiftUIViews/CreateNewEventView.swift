@@ -8,32 +8,32 @@
 import SwiftUI
 
 struct CreateNewEventView: View {
-    
+
     @Environment(\.presentationMode) var presentationMode
     @StateObject var event: EventEntity = EventEntity()
     @State var showTimeOfEvent: Bool = false
     @State var showImagePicker: Bool = false
-    
+
     var body: some View {
         NavigationView {
-            
-            Form{
-                
+
+            Form {
+
                 Section {
                     EventLabelView(title: "Nome do Evento",
                                    image: Image(systemName: "keyboard"),
                                    backgroundColor: .green)
-                    
+
                     TextField("Nome do Evento",
                               text: $event.title)
                         .autocapitalization(.words)
                 }
-                
+
                 Section {
                     EventLabelView(title: "Data do Evento",
                                    image: Image(systemName: "calendar"),
                                    backgroundColor: .blue)
-                    
+
                     DatePicker("Data do Evento",
                                selection: $event.date,
                                displayedComponents: self.datePickerComponentsToShow())
@@ -44,56 +44,56 @@ struct CreateNewEventView: View {
                                        backgroundColor: .blue)
                     }
                 }
-                
+
                 Section {
-                    
+
                     if let image = self.event.image() {
                         HStack {
                             EventLabelView(title: "",
                                            image: Image(systemName: "camera"),
                                            backgroundColor: .purple)
-                            
+
                             Spacer()
-                            
+
                             Button(action: {
                                 self.event.imageData = nil
                                 self.showImagePicker = false
-                            }){
+                            }) {
                                 Text("Remover Imagem")
                                     .foregroundColor(.red)
                             }
                             .buttonStyle(BorderlessButtonStyle()) //Arruma um Bug no swiftUI de ao tocare em um botão numa Section outros botões na mesma section dispara suas actions tbm
                         }
-                        
+
                         Button(action: {
                             self.showImagePicker = true
-                        }){
+                        }) {
                             image
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
-                            
+
                         }
                         .buttonStyle(BorderlessButtonStyle()) //Arruma um Bug no swiftUI de ao tocare em um botão numa Section outros botões na mesma section dispara suas actions tbm
-                    }else {
+                    } else {
                         HStack {
                             EventLabelView(title: "",
                                            image: Image(systemName: "camera"),
                                            backgroundColor: .purple)
-                            
+
                             Spacer()
-                            
+
                             Button(action: {
                                 self.showImagePicker = true
-                            }){
+                            }) {
                                 Text("Selecione uma imagem")
                             }
                         }
                     }
-                    
+
                 }.sheet(isPresented: $showImagePicker) {
                     ImagePickerUISwiftHelper(imageDate: $event.imageData)
                 }
-                
+
                 Section {
                     ColorPicker(selection: $event.color) {
                         EventLabelView(title: "Cor da categoria do evento",
@@ -101,7 +101,7 @@ struct CreateNewEventView: View {
                                        backgroundColor: .yellow)
                     }
                 }
-                
+
                 Section {
                     EventLabelView(title: "URL",
                                    image: Image(systemName: "link"),
@@ -116,16 +116,15 @@ struct CreateNewEventView: View {
                 self.presentationMode.wrappedValue.dismiss()
             }) {
                 Text("Cancelar")
-            }, trailing: Button(action:{
+            }, trailing: Button(action: {
                 DataController.shared.events.append(self.event)
                 DataController.shared.saveData()
                 self.presentationMode.wrappedValue.dismiss()
-            }){
+            }) {
                 Text("Pronto")
             })
         }
-        
-        
+
     }
 }
 
@@ -140,6 +139,6 @@ struct CreateNewEvent_Previews: PreviewProvider {
         NavigationView {
             CreateNewEventView()
         }
-        
+
     }
 }
