@@ -8,14 +8,25 @@
 import SwiftUI
 
 struct EventTileView: View {
+    
+    @Environment(\.colorScheme) var colorScheme
+    
+    
 
     var event: EventEntity
 
     var body: some View {
 
+        let isDarkMode = colorScheme == .dark
+        let darkBackgroundColor: Color = Color(.systemGray6)
+        let backgroundColor: Color = isDarkMode ? darkBackgroundColor : .white
+        
         VStack(spacing: 0) {
 
-            if let imageData = self.event.imageData, let uiImage = UIImage(data: imageData), let image = Image(uiImage: uiImage) {
+            if let imageData = self.event.imageData,
+               let uiImage = UIImage(data: imageData)
+            {
+                let image = Image(uiImage: uiImage)
                 image
                     .resizable()
                     .aspectRatio(contentMode: .fit)
@@ -31,7 +42,7 @@ struct EventTileView: View {
                     .padding(10)
                 Spacer()
             }
-            .background(Color.white)
+            .background(backgroundColor)
 
             HStack {
                 Image(systemName: "calendar")
@@ -50,7 +61,7 @@ struct EventTileView: View {
             .font(.title3)
             .padding(.horizontal, 10)
             .padding(.bottom, 20)
-            .background(Color.white)
+            .background(backgroundColor)
 
         }
         .cornerRadius(10)
