@@ -14,6 +14,7 @@ struct SwiftUITesteApp: App {
             HomeTabView()
                 .onAppear(perform: {
                     DataController.shared.loadData()
+                    DataController.shared.getDiscoveryEventsAPiData()
                 })
         }
     }

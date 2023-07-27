@@ -17,7 +17,9 @@ struct HomeTabView: View {
                 Image(systemName: "calendar")
                 Text("Próximos")
             }
-            Text("Hello 2")
+            NavigationView {
+                DiscoverEventsView()
+            }
                 .tabItem {
                     Image(systemName: "magnifyingglass")
                     Text("Descubra")

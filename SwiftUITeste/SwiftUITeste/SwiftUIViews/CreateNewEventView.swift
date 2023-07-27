@@ -33,11 +33,15 @@ struct CreateNewEventView: View {
                     EventLabelView(title: "Data do Evento",
                                    image: Image(systemName: "calendar"),
                                    backgroundColor: .blue)
-
+                    
                     DatePicker("Data do Evento",
                                selection: $event.date,
                                displayedComponents: self.datePickerComponentsToShow())
-                        .datePickerStyle(GraphicalDatePickerStyle())
+                    .frame(maxHeight: 300)
+                    .frame(minHeight: 300)
+                    .datePickerStyle(GraphicalDatePickerStyle())
+                    .padding()
+                    
                     Toggle(isOn: $showTimeOfEvent) {
                         EventLabelView(title: "Hora do Evento",
                                        image: Image(systemName: "clock.fill"),
@@ -62,7 +66,7 @@ struct CreateNewEventView: View {
                                 Text("Remover Imagem")
                                     .foregroundColor(.red)
                             }
-                            .buttonStyle(BorderlessButtonStyle()) //Arruma um Bug no swiftUI de ao tocare em um botão numa Section outros botões na mesma section dispara suas actions tbm
+                            .buttonStyle(BorderlessButtonStyle()) //Fix a swiftUI bug that when a button was touched they triger other buttons on the same section
                         }
 
                         Button(action: {
@@ -73,15 +77,13 @@ struct CreateNewEventView: View {
                                 .aspectRatio(contentMode: .fit)
 
                         }
-                        .buttonStyle(BorderlessButtonStyle()) //Arruma um Bug no swiftUI de ao tocare em um botão numa Section outros botões na mesma section dispara suas actions tbm
+                        .buttonStyle(BorderlessButtonStyle()) //Fix a swiftUI bug that when a button was touched they triger other buttons on the same section
                     } else {
                         HStack {
                             EventLabelView(title: "",
                                            image: Image(systemName: "camera"),
-                                           backgroundColor: .purple)
-
+                                           backgroundColor: .red)
                             Spacer()
-
                             Button(action: {
                                 self.showImagePicker = true
                             }) {
@@ -98,8 +100,16 @@ struct CreateNewEventView: View {
                     ColorPicker(selection: $event.color) {
                         EventLabelView(title: "Cor da categoria do evento",
                                        image: Image(systemName: "eyedropper"),
-                                       backgroundColor: .yellow)
+                                       backgroundColor: .purple)
                     }
+                }
+                
+                Section {
+                    EventLabelView(title: "Endereço",
+                                   image: Image(systemName: "map"),
+                                   backgroundColor: .yellow)
+                    TextField("Adicione um endereço para o seu evento", text: $event.address)
+                        .autocapitalization(.none)
                 }
 
                 Section {

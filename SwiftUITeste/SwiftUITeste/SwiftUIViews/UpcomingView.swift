@@ -11,11 +11,14 @@ struct UpcomingView: View {
 
     @State var showingCreateView = false
     @ObservedObject var data = DataController.shared
+    let noEventText = "Você ainda não tem eventos para acompanhar 😥\nCrie um evento novo ou de uma olhada na aba de descobertas."
+    let nextEvents = "Próximos Eventos"
 
     var body: some View {
-        EventsListView(events: self.data.upcomingEvents, noEventText: "Você ainda não tem eventos para acompanhar 😥\nCrie um evento novo ou de uma olhada na aba de descobertas.")
+        EventsListView(events: self.data.upcomingEvents,
+                       noEventText: noEventText)
 
-        .navigationTitle("Próximos Eventos")
+        .navigationTitle(nextEvents)
         .navigationBarItems(trailing:
                                 Button(action: {
                                     self.showingCreateView = true

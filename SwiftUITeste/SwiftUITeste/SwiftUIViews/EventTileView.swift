@@ -10,8 +10,6 @@ import SwiftUI
 struct EventTileView: View {
     
     @Environment(\.colorScheme) var colorScheme
-    
-    
 
     var event: EventEntity
 

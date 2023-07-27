@@ -14,6 +14,7 @@ class EventEntity: ObservableObject, Identifiable, Codable {
     var id: String = UUID().uuidString
     var date: Date = Date()
     var title: String = ""
+    var address: String = ""
     var url: String = ""
     var color: Color = Color.purple
     @Published var imageData: Data?
@@ -22,6 +23,7 @@ class EventEntity: ObservableObject, Identifiable, Codable {
         case id
         case date
         case title
+        case address
         case url
         case color
         case imageData
@@ -32,10 +34,15 @@ class EventEntity: ObservableObject, Identifiable, Codable {
         try container.encode(self.id, forKey: CodingKeys.id)
         try container.encode(self.date, forKey: CodingKeys.date)
         try container.encode(self.title, forKey: CodingKeys.title)
+        try container.encode(self.address, forKey: CodingKeys.address)
         try container.encode(self.url, forKey: CodingKeys.url)
         let uiColorString = UIColor(self.color).hexString(true)
         try container.encode(uiColorString, forKey: CodingKeys.color)
         try container.encode(self.imageData, forKey: CodingKeys.imageData)
+    }
+    
+    init() {
+
     }
 
     required init(from decoder: Decoder) throws {
@@ -44,14 +51,48 @@ class EventEntity: ObservableObject, Identifiable, Codable {
         self.id = try values.decode(String.self, forKey: .id)
         self.date = try values.decode(Date.self, forKey: .date)
         self.title = try values.decode(String.self, forKey: .title)
+        self.address = try values.decodeIfPresent(String.self, forKey: .address) ?? ""
         self.url = try values.decode(String.self, forKey: .url)
-        let hexColor: String = try values.decode(String.self, forKey: .color)
-        self.color = Color(UIColor(hexColor))
+        let hexColor: String = try values.decode(String.self, forKey: .color) ?? ""
+        self.color = Color(UIColor("#"+hexColor))
         self.imageData = try? values.decode(Data.self, forKey: .imageData)
     }
-
-    init() {
-
+    
+    init(json: [String: Any]) {
+        if let id = json["id"] as? String {
+            self.id = id
+        }
+        
+        if let title = json["title"] as? String {
+            self.title = title
+        }
+        
+        if let address = json["address"] as? String {
+            self.address = address
+        }
+        
+        if let url = json["url"] as? String {
+            self.url = url
+        }
+        
+        if let dateString = json["date"] as? String {
+            if let dateInRegion = dateString.toDate() {
+                self.date = dateInRegion.date
+            }
+        }
+        
+        if let colorHex = json["color"] as? String {
+            self.color = Color(UIColor("#"+colorHex))
+        }
+        
+        if let imageUrl = json["imageURL"] as? String {
+            if let url = URL(string: imageUrl) {
+                if let data = try? Data(contentsOf: url) {
+                    self.imageData = data
+                }
+            }
+        }
+        
     }
 
     func image() -> Image? {

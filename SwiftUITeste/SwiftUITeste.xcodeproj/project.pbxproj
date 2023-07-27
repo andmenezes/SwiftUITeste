@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 53;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E86E7BF2A72E34400F324E5 /* DiscoverEventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E86E7BE2A72E34400F324E5 /* DiscoverEventsView.swift */; };
 		BC2BE5A7269DB2A5003C57B1 /* EventsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2BE5A6269DB2A5003C57B1 /* EventsListView.swift */; };
 		BC2BE5A9269DBB2C003C57B1 /* PastEventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2BE5A8269DBB2C003C57B1 /* PastEventsView.swift */; };
 		BCD3350E269C79E400FD0013 /* EventTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD3350D269C79E400FD0013 /* EventTileView.swift */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7E86E7BE2A72E34400F324E5 /* DiscoverEventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverEventsView.swift; sourceTree = "<group>"; };
 		BC2BE5A6269DB2A5003C57B1 /* EventsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsListView.swift; sourceTree = "<group>"; };
 		BC2BE5A8269DBB2C003C57B1 /* PastEventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastEventsView.swift; sourceTree = "<group>"; };
 		BCD3350D269C79E400FD0013 /* EventTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTileView.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			children = (
 				BCD7811E2694D6F8003D3D9A /* UpcomingView.swift */,
 				BC2BE5A8269DBB2C003C57B1 /* PastEventsView.swift */,
+				7E86E7BE2A72E34400F324E5 /* DiscoverEventsView.swift */,
 				BCD781202694DCEF003D3D9A /* CreateNewEventView.swift */,
 				BCD781242694E78D003D3D9A /* EventLabelView.swift */,
 				BCD3350D269C79E400FD0013 /* EventTileView.swift */,
@@ -115,13 +118,13 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		BCD33511269C86EC00FD0013 /* Entities */ = {
+		BCD33511269C86EC00FD0013 /* Data */ = {
 			isa = PBXGroup;
 			children = (
 				BCD781222694E025003D3D9A /* EventEntity.swift */,
 				BCD33515269CA5B900FD0013 /* DataController.swift */,
 			);
-			path = Entities;
+			path = Data;
 			sourceTree = "<group>";
 		};
 		BCD780E72694D54F003D3D9A = {
@@ -150,7 +153,7 @@
 				BCD780F32694D54F003D3D9A /* SwiftUITesteApp.swift */,
 				BCD780F52694D54F003D3D9A /* HomeTabView.swift */,
 				BCD3350F269C86AA00FD0013 /* SwiftUIViews */,
-				BCD33511269C86EC00FD0013 /* Entities */,
+				BCD33511269C86EC00FD0013 /* Data */,
 				BCD33510269C86DF00FD0013 /* Helpers */,
 				BCD780F72694D553003D3D9A /* Assets.xcassets */,
 				BCD780FC2694D553003D3D9A /* Info.plist */,
@@ -251,8 +254,9 @@
 		BCD780E82694D54F003D3D9A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1250;
-				LastUpgradeCheck = 1250;
+				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					BCD780EF2694D54F003D3D9A = {
 						CreatedOnToolsVersion = 12.5;
@@ -324,6 +328,7 @@
 			files = (
 				BCD780F62694D54F003D3D9A /* HomeTabView.swift in Sources */,
 				BC2BE5A7269DB2A5003C57B1 /* EventsListView.swift in Sources */,
+				7E86E7BF2A72E34400F324E5 /* DiscoverEventsView.swift in Sources */,
 				BCD3350E269C79E400FD0013 /* EventTileView.swift in Sources */,
 				BCD781232694E025003D3D9A /* EventEntity.swift in Sources */,
 				BCD781252694E78D003D3D9A /* EventLabelView.swift in Sources */,
@@ -494,6 +499,7 @@
 				DEVELOPMENT_TEAM = 9YPJ8Q5GZ7;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SwiftUITeste/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Eventos;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -516,6 +522,7 @@
 				DEVELOPMENT_TEAM = 9YPJ8Q5GZ7;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SwiftUITeste/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Eventos;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
