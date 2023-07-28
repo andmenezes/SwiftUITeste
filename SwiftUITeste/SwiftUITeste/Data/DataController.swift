@@ -9,9 +9,11 @@ import Foundation
 import SwiftDate
 import UIColor_Hex_Swift
 import SwiftUI
+import WidgetKit
 
 class DataController: ObservableObject {
     static var shared = DataController()
+    static var groupUserDefaults = UserDefaults(suiteName: "group.com.andmenezes.eventList")
 
     @Published var events: [EventEntity] = []
     @Published var discoveryEvents: [EventEntity] = []
@@ -34,24 +36,44 @@ class DataController: ObservableObject {
     func saveData() {
         DispatchQueue.global().async {
             let encoder = JSONEncoder()
-            if let encoded = try? encoder.encode(self.events) {
-                UserDefaults.standard.setValue(encoded, forKey: self.userDefaultKey)
-                UserDefaults.standard.synchronize()
+            if let groupUserDefaults = DataController.groupUserDefaults {
+                if let encoded = try? encoder.encode(self.events) {
+                    groupUserDefaults.setValue(encoded, forKey: self.userDefaultKey)
+                    groupUserDefaults.synchronize()
+                    WidgetCenter.shared.reloadAllTimelines()
+                }
             }
+            
         }
     }
 
     func loadData() {
         DispatchQueue.global().async {
-            if let data = UserDefaults.standard.data(forKey: self.userDefaultKey) {
-                let decoder = JSONDecoder()
-                if let jsonEvents = try? decoder.decode([EventEntity].self, from: data) {
-                    DispatchQueue.main.async {
-                        self.events = jsonEvents
+            if let groupUserDefaults = DataController.groupUserDefaults {
+                if let data = groupUserDefaults.data(forKey: self.userDefaultKey) {
+                    let decoder = JSONDecoder()
+                    if let events = try? decoder.decode([EventEntity].self, from: data) {
+                        DispatchQueue.main.async {
+                            self.events = events
+                        }
                     }
                 }
             }
         }
+    }
+    
+    func getUpcomingEventsForWidget() -> [EventEntity] {
+        
+        if let groupUserDefaults = DataController.groupUserDefaults {
+            if let data = groupUserDefaults.data(forKey: self.userDefaultKey) {
+                let decoder = JSONDecoder()
+                if let events = try? decoder.decode([EventEntity].self, from: data) {
+                        return events
+                }
+            }
+        }
+        
+        return []
     }
     
     func addFromDiscover(event: EventEntity) {

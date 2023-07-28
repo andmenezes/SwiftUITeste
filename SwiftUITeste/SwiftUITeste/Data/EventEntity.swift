@@ -111,7 +111,7 @@ class EventEntity: ObservableObject, Identifiable, Codable {
 
     func image() -> Image? {
 
-        if let imageData = self.imageData, let uiImage = UIImage(data: imageData) {
+        if let imageData = self.imageData, let uiImage = UIImage(data: imageData)?.resized(toWidth: 800) {
             return Image(uiImage: uiImage)
         }
         return nil
@@ -145,7 +145,7 @@ extension EventEntity {
         let event = EventEntity()
 
         event.title = "WWDC 2020"
-        event.date = Date() + 2.months
+        event.date = Date() + 1.years
         event.color = .green
         event.url = "www.apple.com"
 
@@ -159,8 +159,8 @@ extension EventEntity {
     static var testEvent2: EventEntity {
         let event = EventEntity()
 
-        event.title = "Viagem em familia para Ilha bela depois vamos para o Rio de Janeiro"
-        event.date = Date() + 4.hours
+        event.title = "Viagem em familia para ilha bela"
+        event.date = Date() + 2.hours
         event.color = .blue
 
         return event
@@ -175,4 +175,15 @@ extension EventEntity {
 
         return event
     }
+}
+
+extension UIImage {
+  func resized(toWidth width: CGFloat, isOpaque: Bool = true) -> UIImage? {
+    let canvas = CGSize(width: width, height: CGFloat(ceil(width/size.width * size.height)))
+    let format = imageRendererFormat
+    format.opaque = isOpaque
+    return UIGraphicsImageRenderer(size: canvas, format: format).image {
+      _ in draw(in: CGRect(origin: .zero, size: canvas))
+    }
+  }
 }
