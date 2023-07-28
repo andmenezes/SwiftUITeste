@@ -83,7 +83,9 @@ struct EventDetailView: View {
                 }
                 .padding(.vertical, self.verticalSpacing)
                 
-                Button(action: {}) {
+                Button(action: {
+                    DataController.shared.deleteEvent(event: self.event)
+                }) {
                     EventDetailViewButton(imageSystemName: "trash",
                                           text: "Deletar o evento",
                                           backgroundColor: .red)

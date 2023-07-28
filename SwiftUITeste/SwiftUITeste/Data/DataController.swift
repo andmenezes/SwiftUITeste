@@ -52,13 +52,21 @@ class DataController: ObservableObject {
                 }
             }
         }
-
     }
     
     func addFromDiscover(event: EventEntity) {
         events.append(event)
         event.objectWillChange.send()
         saveData()
+    }
+    
+    func deleteEvent(event: EventEntity) {
+        if let index = events.firstIndex(where: { loopingEvent -> Bool in
+            loopingEvent.id == event.id
+        }) {
+            events.remove(at: index)
+        }
+        self.saveData()
     }
     
     func getDiscoveryEventsAPiData() {
