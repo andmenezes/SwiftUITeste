@@ -55,6 +55,12 @@ class DataController: ObservableObject {
 
     }
     
+    func addFromDiscover(event: EventEntity) {
+        events.append(event)
+        event.objectWillChange.send()
+        saveData()
+    }
+    
     func getDiscoveryEventsAPiData() {
         if let url = URL(string: "https://api.jsonbin.io/v3/b/64c29bef8e4aa6225ec5fcb0/latest") {
             let request = URLRequest(url: url)

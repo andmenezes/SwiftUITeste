@@ -16,9 +16,9 @@ struct UpcomingView: View {
 
     var body: some View {
         EventsListView(events: self.data.upcomingEvents,
-                       noEventText: noEventText)
+                       noEventText: self.noEventText)
 
-        .navigationTitle(nextEvents)
+        .navigationTitle(self.nextEvents)
         .navigationBarItems(trailing:
                                 Button(action: {
                                     self.showingCreateView = true

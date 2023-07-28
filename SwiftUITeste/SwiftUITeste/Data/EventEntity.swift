@@ -18,6 +18,19 @@ class EventEntity: ObservableObject, Identifiable, Codable {
     var url: String = ""
     var color: Color = Color.purple
     @Published var imageData: Data?
+    
+    var hasBeenAdded: Bool {
+        let event = DataController.shared.events.first { event in
+            return event.id == self.id
+        }
+        
+        if event != nil {
+            return true
+        }else {
+            return false
+        }
+        
+    }
 
     enum CodingKeys: String, CodingKey {
         case id
@@ -27,18 +40,6 @@ class EventEntity: ObservableObject, Identifiable, Codable {
         case url
         case color
         case imageData
-    }
-
-    func encode(to encoder: Encoder) throws {
-        var container = encoder.container(keyedBy: CodingKeys.self)
-        try container.encode(self.id, forKey: CodingKeys.id)
-        try container.encode(self.date, forKey: CodingKeys.date)
-        try container.encode(self.title, forKey: CodingKeys.title)
-        try container.encode(self.address, forKey: CodingKeys.address)
-        try container.encode(self.url, forKey: CodingKeys.url)
-        let uiColorString = UIColor(self.color).hexString(true)
-        try container.encode(uiColorString, forKey: CodingKeys.color)
-        try container.encode(self.imageData, forKey: CodingKeys.imageData)
     }
     
     init() {
@@ -53,8 +54,8 @@ class EventEntity: ObservableObject, Identifiable, Codable {
         self.title = try values.decode(String.self, forKey: .title)
         self.address = try values.decodeIfPresent(String.self, forKey: .address) ?? ""
         self.url = try values.decode(String.self, forKey: .url)
-        let hexColor: String = try values.decode(String.self, forKey: .color) ?? ""
-        self.color = Color(UIColor("#"+hexColor))
+        let hexColor: String = try values.decode(String.self, forKey: .color)
+        self.color = Color(UIColor(hexColor))
         self.imageData = try? values.decode(Data.self, forKey: .imageData)
     }
     
@@ -92,7 +93,19 @@ class EventEntity: ObservableObject, Identifiable, Codable {
                 }
             }
         }
-        
+    }
+    
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(self.id, forKey: CodingKeys.id)
+        try container.encode(self.date, forKey: CodingKeys.date)
+        try container.encode(self.title, forKey: CodingKeys.title)
+        try container.encode(self.address, forKey: CodingKeys.address)
+        try container.encode(self.url, forKey: CodingKeys.url)
+        let color = UIColor(self.color)
+        let uiColorString = color.hexString(true)
+        try container.encode(uiColorString, forKey: CodingKeys.color)
+        try container.encode(self.imageData, forKey: CodingKeys.imageData)
     }
 
     func image() -> Image? {
@@ -119,6 +132,10 @@ class EventEntity: ObservableObject, Identifiable, Codable {
 
     func timeFromNow() -> String {
         return self.date.toRelative(since: nil, style: nil, locale: Locale(identifier: "pt-BR"))
+    }
+    
+    func validUrl() -> URL? {
+        return URL(string: self.url)
     }
 }
 

@@ -11,7 +11,7 @@ struct DiscoverEventsView: View {
     @ObservedObject var data = DataController.shared
     
     var body: some View {
-        EventsListView(events: self.data.discoveryEvents.sorted {$0.date < $1.date}, noEventText: "Estamos carregando uns eventos maneiros para você 🤘🏻")
+        EventsListView(events: self.data.discoveryEvents.sorted {$0.date < $1.date}, noEventText: "Estamos carregando uns eventos maneiros para você 🤘🏻", isDiscover: true)
         
             .navigationTitle("Descubra")
             .navigationBarItems(trailing:

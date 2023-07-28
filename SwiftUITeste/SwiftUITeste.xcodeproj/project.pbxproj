@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7E86E7BF2A72E34400F324E5 /* DiscoverEventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E86E7BE2A72E34400F324E5 /* DiscoverEventsView.swift */; };
+		7E86E7C22A72F29500F324E5 /* EventDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E86E7C12A72F29500F324E5 /* EventDetailView.swift */; };
+		7E86E7C42A72F68600F324E5 /* EventDetailViewButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E86E7C32A72F68600F324E5 /* EventDetailViewButton.swift */; };
 		BC2BE5A7269DB2A5003C57B1 /* EventsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2BE5A6269DB2A5003C57B1 /* EventsListView.swift */; };
 		BC2BE5A9269DBB2C003C57B1 /* PastEventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2BE5A8269DBB2C003C57B1 /* PastEventsView.swift */; };
 		BCD3350E269C79E400FD0013 /* EventTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD3350D269C79E400FD0013 /* EventTileView.swift */; };
@@ -46,6 +48,8 @@
 
 /* Begin PBXFileReference section */
 		7E86E7BE2A72E34400F324E5 /* DiscoverEventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverEventsView.swift; sourceTree = "<group>"; };
+		7E86E7C12A72F29500F324E5 /* EventDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailView.swift; sourceTree = "<group>"; };
+		7E86E7C32A72F68600F324E5 /* EventDetailViewButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewButton.swift; sourceTree = "<group>"; };
 		BC2BE5A6269DB2A5003C57B1 /* EventsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsListView.swift; sourceTree = "<group>"; };
 		BC2BE5A8269DBB2C003C57B1 /* PastEventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastEventsView.swift; sourceTree = "<group>"; };
 		BCD3350D269C79E400FD0013 /* EventTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTileView.swift; sourceTree = "<group>"; };
@@ -96,16 +100,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BCD3350F269C86AA00FD0013 /* SwiftUIViews */ = {
+		7E86E7C02A72F25C00F324E5 /* Tabs */ = {
 			isa = PBXGroup;
 			children = (
 				BCD7811E2694D6F8003D3D9A /* UpcomingView.swift */,
-				BC2BE5A8269DBB2C003C57B1 /* PastEventsView.swift */,
 				7E86E7BE2A72E34400F324E5 /* DiscoverEventsView.swift */,
+				BC2BE5A8269DBB2C003C57B1 /* PastEventsView.swift */,
+			);
+			path = Tabs;
+			sourceTree = "<group>";
+		};
+		7E86E7C52A73CAE600F324E5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BC2BE5A6269DB2A5003C57B1 /* EventsListView.swift */,
 				BCD781202694DCEF003D3D9A /* CreateNewEventView.swift */,
+				7E86E7C12A72F29500F324E5 /* EventDetailView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7E86E7C62A73CAFA00F324E5 /* Components */ = {
+			isa = PBXGroup;
+			children = (
 				BCD781242694E78D003D3D9A /* EventLabelView.swift */,
 				BCD3350D269C79E400FD0013 /* EventTileView.swift */,
-				BC2BE5A6269DB2A5003C57B1 /* EventsListView.swift */,
+				7E86E7C32A72F68600F324E5 /* EventDetailViewButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		BCD3350F269C86AA00FD0013 /* SwiftUIViews */ = {
+			isa = PBXGroup;
+			children = (
+				7E86E7C02A72F25C00F324E5 /* Tabs */,
+				7E86E7C52A73CAE600F324E5 /* Views */,
+				7E86E7C62A73CAFA00F324E5 /* Components */,
 			);
 			path = SwiftUIViews;
 			sourceTree = "<group>";
@@ -326,7 +356,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E86E7C42A72F68600F324E5 /* EventDetailViewButton.swift in Sources */,
 				BCD780F62694D54F003D3D9A /* HomeTabView.swift in Sources */,
+				7E86E7C22A72F29500F324E5 /* EventDetailView.swift in Sources */,
 				BC2BE5A7269DB2A5003C57B1 /* EventsListView.swift in Sources */,
 				7E86E7BF2A72E34400F324E5 /* DiscoverEventsView.swift in Sources */,
 				BCD3350E269C79E400FD0013 /* EventTileView.swift in Sources */,
