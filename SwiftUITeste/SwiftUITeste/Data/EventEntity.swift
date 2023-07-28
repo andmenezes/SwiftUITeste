@@ -11,12 +11,12 @@ import SwiftDate
 import UIColor_Hex_Swift
 
 class EventEntity: ObservableObject, Identifiable, Codable {
-    var id: String = UUID().uuidString
-    var date: Date = Date()
-    var title: String = ""
-    var address: String = ""
-    var url: String = ""
-    var color: Color = Color.purple
+    @Published var id: String = UUID().uuidString
+    @Published var date: Date = Date()
+    @Published var title: String = ""
+    @Published var address: String = ""
+    @Published var url: String = ""
+    @Published var color: Color = Color.purple
     @Published var imageData: Data?
     
     var hasBeenAdded: Bool {
@@ -77,6 +77,7 @@ class EventEntity: ObservableObject, Identifiable, Codable {
         }
         
         if let dateString = json["date"] as? String {
+            SwiftDate.defaultRegion = Region.local
             if let dateInRegion = dateString.toDate() {
                 self.date = dateInRegion.date
             }

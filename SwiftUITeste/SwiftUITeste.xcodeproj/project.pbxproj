@@ -54,7 +54,7 @@
 		BC2BE5A8269DBB2C003C57B1 /* PastEventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastEventsView.swift; sourceTree = "<group>"; };
 		BCD3350D269C79E400FD0013 /* EventTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTileView.swift; sourceTree = "<group>"; };
 		BCD33515269CA5B900FD0013 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
-		BCD780F02694D54F003D3D9A /* SwiftUITeste.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUITeste.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCD780F02694D54F003D3D9A /* Meus Eventos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meus Eventos.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCD780F32694D54F003D3D9A /* SwiftUITesteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUITesteApp.swift; sourceTree = "<group>"; };
 		BCD780F52694D54F003D3D9A /* HomeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabView.swift; sourceTree = "<group>"; };
 		BCD780F72694D553003D3D9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -170,7 +170,7 @@
 		BCD780F12694D54F003D3D9A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BCD780F02694D54F003D3D9A /* SwiftUITeste.app */,
+				BCD780F02694D54F003D3D9A /* Meus Eventos.app */,
 				BCD781012694D553003D3D9A /* SwiftUITesteTests.xctest */,
 				BCD7810C2694D553003D3D9A /* SwiftUITesteUITests.xctest */,
 			);
@@ -221,9 +221,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BCD780EF2694D54F003D3D9A /* SwiftUITeste */ = {
+		BCD780EF2694D54F003D3D9A /* Meus Eventos */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BCD781152694D553003D3D9A /* Build configuration list for PBXNativeTarget "SwiftUITeste" */;
+			buildConfigurationList = BCD781152694D553003D3D9A /* Build configuration list for PBXNativeTarget "Meus Eventos" */;
 			buildPhases = (
 				BCD780EC2694D54F003D3D9A /* Sources */,
 				BCD780ED2694D54F003D3D9A /* Frameworks */,
@@ -233,13 +233,13 @@
 			);
 			dependencies = (
 			);
-			name = SwiftUITeste;
+			name = "Meus Eventos";
 			packageProductDependencies = (
 				BCD33513269C89A700FD0013 /* SwiftDate */,
 				BCD33518269CB6A900FD0013 /* UIColor_Hex_Swift */,
 			);
 			productName = SwiftUITeste;
-			productReference = BCD780F02694D54F003D3D9A /* SwiftUITeste.app */;
+			productReference = BCD780F02694D54F003D3D9A /* Meus Eventos.app */;
 			productType = "com.apple.product-type.application";
 		};
 		BCD781002694D553003D3D9A /* SwiftUITesteTests */ = {
@@ -318,7 +318,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BCD780EF2694D54F003D3D9A /* SwiftUITeste */,
+				BCD780EF2694D54F003D3D9A /* Meus Eventos */,
 				BCD781002694D553003D3D9A /* SwiftUITesteTests */,
 				BCD7810B2694D553003D3D9A /* SwiftUITesteUITests */,
 			);
@@ -394,12 +394,12 @@
 /* Begin PBXTargetDependency section */
 		BCD781032694D553003D3D9A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BCD780EF2694D54F003D3D9A /* SwiftUITeste */;
+			target = BCD780EF2694D54F003D3D9A /* Meus Eventos */;
 			targetProxy = BCD781022694D553003D3D9A /* PBXContainerItemProxy */;
 		};
 		BCD7810E2694D553003D3D9A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BCD780EF2694D54F003D3D9A /* SwiftUITeste */;
+			target = BCD780EF2694D54F003D3D9A /* Meus Eventos */;
 			targetProxy = BCD7810D2694D553003D3D9A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -659,7 +659,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BCD781152694D553003D3D9A /* Build configuration list for PBXNativeTarget "SwiftUITeste" */ = {
+		BCD781152694D553003D3D9A /* Build configuration list for PBXNativeTarget "Meus Eventos" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BCD781162694D553003D3D9A /* Debug */,

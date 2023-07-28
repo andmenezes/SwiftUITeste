@@ -57,7 +57,7 @@ class DataController: ObservableObject {
     func addFromDiscover(event: EventEntity) {
         events.append(event)
         event.objectWillChange.send()
-        saveData()
+        self.saveData()
     }
     
     func deleteEvent(event: EventEntity) {
@@ -66,6 +66,19 @@ class DataController: ObservableObject {
         }) {
             events.remove(at: index)
         }
+        self.saveData()
+    }
+    
+    func saveEvent(event: EventEntity) {
+        
+        if let index = events.firstIndex(where: { loopingEvent -> Bool in
+            loopingEvent.id == event.id
+        }) {
+            events[index] = event
+        }else {
+            events.append(event)
+        }
+        
         self.saveData()
     }
     

@@ -11,7 +11,7 @@ struct EventTileView: View {
     
     @Environment(\.colorScheme) var colorScheme
 
-    var event: EventEntity
+    @ObservedObject var event: EventEntity
 
     var body: some View {
 

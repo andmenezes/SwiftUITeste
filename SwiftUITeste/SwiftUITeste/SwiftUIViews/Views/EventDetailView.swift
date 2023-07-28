@@ -12,6 +12,8 @@ struct EventDetailView: View {
     @Environment(\.colorScheme) var colorScheme
 
     @ObservedObject var event: EventEntity
+    @State var showingCreateView = false
+    
     var isDiscover = false
     let verticalSpacing: CGFloat = 5
     
@@ -76,12 +78,17 @@ struct EventDetailView: View {
                 .padding(.vertical, self.verticalSpacing)
                 
             } else {
-                Button(action: {}) {
+                Button(action: {
+                    showingCreateView = true
+                }) {
                     EventDetailViewButton(imageSystemName: "pencil.circle",
                                           text: "Editar evento",
                                           backgroundColor: .blue)
                 }
                 .padding(.vertical, self.verticalSpacing)
+                .sheet(isPresented: $showingCreateView, content: {
+                    CreateNewEventView(event: self.event)
+                })
                 
                 Button(action: {
                     DataController.shared.deleteEvent(event: self.event)
@@ -91,7 +98,6 @@ struct EventDetailView: View {
                                           backgroundColor: .red)
                 }
                 .padding(.vertical, self.verticalSpacing)
-                
             }
         }
         .navigationBarTitleDisplayMode(.inline)

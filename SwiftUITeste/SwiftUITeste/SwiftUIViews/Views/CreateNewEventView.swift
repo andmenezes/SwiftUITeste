@@ -126,12 +126,14 @@ struct CreateNewEventView: View {
                 self.presentationMode.wrappedValue.dismiss()
             }) {
                 Text("Cancelar")
+                    .font(.title2)
             }, trailing: Button(action: {
-                DataController.shared.events.append(self.event)
-                DataController.shared.saveData()
+                DataController.shared.saveEvent(event: self.event)
                 self.presentationMode.wrappedValue.dismiss()
             }) {
-                Text("Pronto")
+                Text("Salvar")
+                    .font(.title2)
+                    .bold()
             })
         }
 
