@@ -11,7 +11,7 @@ import SwiftUI
 struct SwiftUITesteApp: App {
     var body: some Scene {
         WindowGroup {
-            HomeTabView()
+            MainView()
                 .onAppear(perform: {
                     DataController.shared.loadData()
                     DataController.shared.getDiscoveryEventsAPiData()

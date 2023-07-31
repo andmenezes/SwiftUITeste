@@ -43,7 +43,6 @@ class DataController: ObservableObject {
                     WidgetCenter.shared.reloadAllTimelines()
                 }
             }
-            
         }
     }
 
