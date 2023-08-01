@@ -1,25 +1,23 @@
 {
-  "object": {
-    "pins": [
-      {
-        "package": "SwiftDate",
-        "repositoryURL": "https://github.com/malcommac/SwiftDate.git",
-        "state": {
-          "branch": null,
-          "revision": "6190d0cefff3013e77ed567e6b074f324e5c5bf5",
-          "version": "6.3.1"
-        }
-      },
-      {
-        "package": "UIColor_Hex_Swift",
-        "repositoryURL": "https://github.com/yeahdongcn/UIColor-Hex-Swift.git",
-        "state": {
-          "branch": null,
-          "revision": "7043811d77df477bf0df3e3bc4269cbd44b3f1a4",
-          "version": "5.1.1"
-        }
+  "pins" : [
+    {
+      "identity" : "swiftdate",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/malcommac/SwiftDate.git",
+      "state" : {
+        "revision" : "6190d0cefff3013e77ed567e6b074f324e5c5bf5",
+        "version" : "6.3.1"
       }
-    ]
-  },
-  "version": 1
+    },
+    {
+      "identity" : "uicolor-hex-swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/yeahdongcn/UIColor-Hex-Swift.git",
+      "state" : {
+        "revision" : "7043811d77df477bf0df3e3bc4269cbd44b3f1a4",
+        "version" : "5.1.1"
+      }
+    }
+  ],
+  "version" : 2
 }
