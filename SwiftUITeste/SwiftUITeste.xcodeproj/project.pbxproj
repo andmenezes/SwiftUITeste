@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E75E7F22A793A8D00491F8E /* EventkitUiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E75E7F12A793A8D00491F8E /* EventkitUiViewController.swift */; };
 		7E827B922A77D09500E2095B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E827B912A77D09500E2095B /* MainView.swift */; };
 		7E827B942A77D3F100E2095B /* HomeSideBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E827B932A77D3F100E2095B /* HomeSideBarView.swift */; };
 		7E827B972A77FD2200E2095B /* EventDetailCompactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E827B962A77FD2200E2095B /* EventDetailCompactView.swift */; };
@@ -89,6 +90,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7E75E7F12A793A8D00491F8E /* EventkitUiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventkitUiViewController.swift; sourceTree = "<group>"; };
 		7E827B912A77D09500E2095B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		7E827B932A77D3F100E2095B /* HomeSideBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSideBarView.swift; sourceTree = "<group>"; };
 		7E827B962A77FD2200E2095B /* EventDetailCompactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailCompactView.swift; sourceTree = "<group>"; };
@@ -253,6 +255,7 @@
 		BCD33510269C86DF00FD0013 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				7E75E7F12A793A8D00491F8E /* EventkitUiViewController.swift */,
 				BCE6096F2695BFBA00C3E4A0 /* ImagePickerSwiftUIHelper.swift */,
 				7E827BA42A792A9900E2095B /* DeepLinkHelpers.swift */,
 			);
@@ -532,6 +535,7 @@
 				BC2BE5A7269DB2A5003C57B1 /* EventsListView.swift in Sources */,
 				7E86E7BF2A72E34400F324E5 /* DiscoverEventsView.swift in Sources */,
 				BCD3350E269C79E400FD0013 /* EventTileView.swift in Sources */,
+				7E75E7F22A793A8D00491F8E /* EventkitUiViewController.swift in Sources */,
 				BCD781232694E025003D3D9A /* EventEntity.swift in Sources */,
 				7E827BA22A7824CF00E2095B /* EventDetailViewRegularButton.swift in Sources */,
 				BCD781252694E78D003D3D9A /* EventLabelView.swift in Sources */,

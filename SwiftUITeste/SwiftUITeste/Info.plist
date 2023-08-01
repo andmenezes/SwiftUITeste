@@ -25,10 +25,12 @@
 		<key>UIApplicationSupportsMultipleScenes</key>
 		<true/>
 	</dict>
-    <key>LSApplicationQueriesSchemes</key>
-    <array>
-        <string>waze</string>
-    </array>
+	<key>NSCalendarsUsageDescription</key>
+	<string>Gostaríamos de acessar sua agenda para adicionar eventos relevantes</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>waze</string>
+	</array>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
 	<key>UILaunchScreen</key>
