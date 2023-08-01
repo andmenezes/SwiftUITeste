@@ -33,11 +33,14 @@ struct EventDetailCompactView: View {
                     image
                         .resizable()
                         .aspectRatio(contentMode: .fit)
+                    Rectangle()
+                        .foregroundColor(self.event.color)
+                        .frame(height: 15)
+                } else {
+                    Rectangle()
+                        .foregroundColor(self.event.color)
+                        .aspectRatio(contentMode: .fit)
                 }
-                
-                Rectangle()
-                    .foregroundColor(self.event.color)
-                    .frame(height: 15)
                 
                 HStack {
                     Spacer()
@@ -50,6 +53,13 @@ struct EventDetailCompactView: View {
                 
                 Text("\(self.event.timeFromNow().capitalizedSentence) no dia \(self.event.dateAsString())")
                     .font(.title2)
+                
+                if  !self.event.address.isEmpty {
+                    Text("Endereço: \(self.event.address)").onTapGesture {
+                        DeepLinkHelpers().canOpenWithGps(address: self.event.address)
+                    }
+                    .padding(.top, 20)
+                }
                 
                 Spacer()
                 

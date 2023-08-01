@@ -50,7 +50,7 @@ struct EventTileView: View {
 
                 Spacer()
 
-                Text(self.event.timeFromNow())
+                Text(self.event.timeFromNow().capitalizedSentence)
 
                 Image(systemName: "clock.fill")
                     .foregroundColor(.blue)

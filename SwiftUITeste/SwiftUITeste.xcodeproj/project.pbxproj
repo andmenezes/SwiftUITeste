@@ -17,6 +17,7 @@
 		7E827BA02A781CA700E2095B /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E827B9E2A781CA700E2095B /* UIImageExtension.swift */; };
 		7E827BA22A7824CF00E2095B /* EventDetailViewRegularButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E827BA12A7824CF00E2095B /* EventDetailViewRegularButton.swift */; };
 		7E827BA32A7824CF00E2095B /* EventDetailViewRegularButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E827BA12A7824CF00E2095B /* EventDetailViewRegularButton.swift */; };
+		7E827BA52A792A9900E2095B /* DeepLinkHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E827BA42A792A9900E2095B /* DeepLinkHelpers.swift */; };
 		7E86E7BF2A72E34400F324E5 /* DiscoverEventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E86E7BE2A72E34400F324E5 /* DiscoverEventsView.swift */; };
 		7E86E7C22A72F29500F324E5 /* EventDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E86E7C12A72F29500F324E5 /* EventDetailView.swift */; };
 		7E86E7C42A72F68600F324E5 /* EventDetailViewButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E86E7C32A72F68600F324E5 /* EventDetailViewButton.swift */; };
@@ -95,6 +96,7 @@
 		7E827B9A2A781C2300E2095B /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		7E827B9E2A781CA700E2095B /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		7E827BA12A7824CF00E2095B /* EventDetailViewRegularButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewRegularButton.swift; sourceTree = "<group>"; };
+		7E827BA42A792A9900E2095B /* DeepLinkHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkHelpers.swift; sourceTree = "<group>"; };
 		7E86E7BE2A72E34400F324E5 /* DiscoverEventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverEventsView.swift; sourceTree = "<group>"; };
 		7E86E7C12A72F29500F324E5 /* EventDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailView.swift; sourceTree = "<group>"; };
 		7E86E7C32A72F68600F324E5 /* EventDetailViewButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewButton.swift; sourceTree = "<group>"; };
@@ -252,6 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				BCE6096F2695BFBA00C3E4A0 /* ImagePickerSwiftUIHelper.swift */,
+				7E827BA42A792A9900E2095B /* DeepLinkHelpers.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -522,6 +525,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E86E7C42A72F68600F324E5 /* EventDetailViewButton.swift in Sources */,
+				7E827BA52A792A9900E2095B /* DeepLinkHelpers.swift in Sources */,
 				BCD780F62694D54F003D3D9A /* HomeTabView.swift in Sources */,
 				7E86E7C22A72F29500F324E5 /* EventDetailView.swift in Sources */,
 				7E827B9F2A781CA700E2095B /* UIImageExtension.swift in Sources */,

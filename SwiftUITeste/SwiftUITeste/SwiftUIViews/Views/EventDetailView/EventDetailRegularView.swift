@@ -50,8 +50,15 @@ struct EventDetailRegularView: View {
                     
                     Text("\(self.event.timeFromNow().capitalizedSentence) no dia \(self.event.dateAsString())")
                         .font(.title)
-                        .padding(.bottom, 10)
                         .padding(.horizontal, 20)
+                    
+                    if  !self.event.address.isEmpty {
+                        Text("Endereço: \(self.event.address)").onTapGesture {
+                            DeepLinkHelpers().canOpenWithGps(address: self.event.address)
+                        }
+                        .font(.title)
+                        .padding([.top,.bottom], 20)
+                    }
                     
                 }
                 .background(Color.white)
