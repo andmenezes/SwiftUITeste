@@ -18,9 +18,9 @@ struct EventDetailView: View {
         
         
         if horizontalSizeClass == .compact {
-            EventDetailCompactView(isDiscover: self.isDiscover, event: self.event)
+            EventDetailCompactView(event: self.event, isDiscover: self.isDiscover)
         } else {
-            EventDetailRegularView(isDiscover: self.isDiscover, event: self.event)
+            EventDetailRegularView(event: self.event, isDiscover: self.isDiscover)
         }
     }
 }

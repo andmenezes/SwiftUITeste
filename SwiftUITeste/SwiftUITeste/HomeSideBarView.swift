@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeSideBarView: View {
     
-    @State var showingCreateView = false
+    @State private var showingCreateView = false
     
     var body: some View {
         NavigationView {

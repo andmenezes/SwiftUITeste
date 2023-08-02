@@ -84,12 +84,13 @@ struct EventListWidgetiOSEntryView : View {
                                 .padding(.horizontal, 10)
                                 .padding(.bottom, 15)
                                 .foregroundColor(.white)
-                                .font(self.fontSize() )
+                                .font(self.fontSize())
+                                .overlay(Color.black.opacity(0.05))
                         }
                     }
                 }
                 
-                } else {
+            } else {
                 
                 VStack {
                     Spacer()

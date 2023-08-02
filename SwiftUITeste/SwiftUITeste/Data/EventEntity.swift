@@ -132,7 +132,7 @@ class EventEntity: ObservableObject, Identifiable, Codable {
     }
 
     func timeFromNow() -> String {
-        return self.date.toRelative(since: nil, style: nil, locale: Locale(identifier: "pt-BR"))
+        return self.date.toRelative(since: nil, style: nil, locale: Locale(identifier: "pt-BR")).capitalizedSentence
     }
     
     func validUrl() -> URL? {

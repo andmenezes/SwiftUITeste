@@ -9,7 +9,7 @@ import SwiftUI
 
 struct UpcomingView: View {
 
-    @State var showingCreateView = false
+    @State private var showingCreateView = false
     @ObservedObject var data = DataController.shared
     let noEventText = "Você ainda não tem eventos para acompanhar 😥\nCrie um evento novo ou de uma olhada na aba de descobertas."
     let nextEvents = "Próximos Eventos"

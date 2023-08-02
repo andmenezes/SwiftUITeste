@@ -10,12 +10,11 @@ import SwiftUI
 struct EventDetailRegularView: View {
     
     @Environment(\.colorScheme) var colorScheme
+    @ObservedObject var event: EventEntity
+    @State private var showingCreateView = false
+    @State private var deleted = false
     
     var isDiscover = false
-    @ObservedObject var event: EventEntity
-    
-    @State var showingCreateView = false
-    @State var deleted = false
     let verticalSpacing: CGFloat = 5
     
     var body: some View {
@@ -48,7 +47,7 @@ struct EventDetailRegularView: View {
                         .padding(.horizontal, 20)
                         .padding(.top, 10)
                     
-                    Text("\(self.event.timeFromNow().capitalizedSentence) no dia \(self.event.dateAsString())")
+                    Text("\(self.event.timeFromNow()) no dia \(self.event.dateAsString())")
                         .font(.title)
                         .padding(.horizontal, 20)
                     

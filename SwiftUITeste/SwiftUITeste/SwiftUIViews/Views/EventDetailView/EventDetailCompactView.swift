@@ -9,12 +9,14 @@ import SwiftUI
 
 struct EventDetailCompactView: View {
     @Environment(\.colorScheme) var colorScheme
+    @ObservedObject var event: EventEntity
+    @State var showingCreateView = false
+    @State var deleted = false
     
     var isDiscover = false
-    @State var showingCreateView = false
-    @ObservedObject var event: EventEntity
-    let verticalSpacing: CGFloat = 5
-    @State var deleted = false
+    
+    private let verticalSpacing: CGFloat = 5
+    
     
     var body: some View {
         let isDarkMode = colorScheme == .dark
@@ -51,7 +53,7 @@ struct EventDetailCompactView: View {
                 }
                 .background(backgroundColor)
                 
-                Text("\(self.event.timeFromNow().capitalizedSentence) no dia \(self.event.dateAsString())")
+                Text("\(self.event.timeFromNow()) no dia \(self.event.dateAsString())")
                     .font(.title2)
                 
                 if  !self.event.address.isEmpty {

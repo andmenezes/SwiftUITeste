@@ -11,8 +11,8 @@ struct CreateNewEventView: View {
     
     @Environment(\.presentationMode) var presentationMode
     @StateObject var event: EventEntity = EventEntity()
-    @State var showTimeOfEvent: Bool = false
-    @State var showImagePicker: Bool = false
+    @State private var showTimeOfEvent: Bool = true
+    @State private var showImagePicker: Bool = false
     @State private var showingAlert = false
     
     var body: some View {
@@ -38,9 +38,9 @@ struct CreateNewEventView: View {
                     DatePicker("Data do Evento",
                                selection: $event.date,
                                displayedComponents: self.datePickerComponentsToShow())
-                    .frame(height: 340)
                     .datePickerStyle(GraphicalDatePickerStyle())
-                    .padding()
+                    .environment(\.locale, Locale.init(identifier: "pt-br"))
+                    
                     
                     Toggle(isOn: $showTimeOfEvent) {
                         EventLabelView(title: "Hora do Evento",
@@ -150,7 +150,6 @@ struct CreateNewEventView: View {
             self.presentationMode.wrappedValue.dismiss()
         }
     }
-    
 }
 
 extension CreateNewEventView {
