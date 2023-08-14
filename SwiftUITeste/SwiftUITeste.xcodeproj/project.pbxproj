@@ -32,6 +32,7 @@
 		7E86E7E32A74300D00F324E5 /* UIColor_Hex_Swift in Frameworks */ = {isa = PBXBuildFile; productRef = 7E86E7E22A74300D00F324E5 /* UIColor_Hex_Swift */; };
 		7E86E7E42A74302600F324E5 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD33515269CA5B900FD0013 /* DataController.swift */; };
 		7E86E7E52A74302A00F324E5 /* EventEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD781222694E025003D3D9A /* EventEntity.swift */; };
+		7EB4A52E2A7BCB8500E63B71 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EB4A52D2A7BCB8500E63B71 /* Launch Screen.storyboard */; };
 		BC2BE5A7269DB2A5003C57B1 /* EventsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2BE5A6269DB2A5003C57B1 /* EventsListView.swift */; };
 		BC2BE5A9269DBB2C003C57B1 /* PastEventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2BE5A8269DBB2C003C57B1 /* PastEventsView.swift */; };
 		BCD3350E269C79E400FD0013 /* EventTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD3350D269C79E400FD0013 /* EventTileView.swift */; };
@@ -111,6 +112,7 @@
 		7E86E7D82A742C4900F324E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E86E7E62A7444E600F324E5 /* Meus Eventos.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Meus Eventos.entitlements"; sourceTree = "<group>"; };
 		7E86E7E72A74452900F324E5 /* EventListWidgetiOSExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EventListWidgetiOSExtension.entitlements; sourceTree = "<group>"; };
+		7EB4A52D2A7BCB8500E63B71 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		BC2BE5A6269DB2A5003C57B1 /* EventsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsListView.swift; sourceTree = "<group>"; };
 		BC2BE5A8269DBB2C003C57B1 /* PastEventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastEventsView.swift; sourceTree = "<group>"; };
 		BCD3350D269C79E400FD0013 /* EventTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTileView.swift; sourceTree = "<group>"; };
@@ -274,8 +276,8 @@
 		BCD780E72694D54F003D3D9A = {
 			isa = PBXGroup;
 			children = (
-				7E86E7E72A74452900F324E5 /* EventListWidgetiOSExtension.entitlements */,
 				7E86E7E62A7444E600F324E5 /* Meus Eventos.entitlements */,
+				7E86E7E72A74452900F324E5 /* EventListWidgetiOSExtension.entitlements */,
 				BCD780F22694D54F003D3D9A /* SwiftUITeste */,
 				BCD781042694D553003D3D9A /* SwiftUITesteTests */,
 				BCD7810F2694D553003D3D9A /* SwiftUITesteUITests */,
@@ -310,6 +312,7 @@
 				BCD780F72694D553003D3D9A /* Assets.xcassets */,
 				BCD780FC2694D553003D3D9A /* Info.plist */,
 				BCD780F92694D553003D3D9A /* Preview Content */,
+				7EB4A52D2A7BCB8500E63B71 /* Launch Screen.storyboard */,
 			);
 			path = SwiftUITeste;
 			sourceTree = "<group>";
@@ -487,6 +490,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EB4A52E2A7BCB8500E63B71 /* Launch Screen.storyboard in Resources */,
 				BCD780FB2694D553003D3D9A /* Preview Assets.xcassets in Resources */,
 				BCD780F82694D553003D3D9A /* Assets.xcassets in Resources */,
 			);

@@ -70,13 +70,16 @@ struct EventListWidgetiOSEntryView : View {
                     Color.black
                         .opacity(0.30)
                     
-                    Text(event.title)
-                        .foregroundColor(.white)
-                        .font(self.fontSize())
-                        .padding()
-                        .multilineTextAlignment(.center)
-                    
                     VStack{
+                        HStack {
+                            Text(event.title)
+                                .foregroundColor(.white)
+                                .font(self.fontSize())
+                                .padding([.top, .leading], 20)
+                                .multilineTextAlignment(.leading)
+                            Spacer()
+                        }
+                        
                         Spacer()
                         HStack {
                             Spacer()

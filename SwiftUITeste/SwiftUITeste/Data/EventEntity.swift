@@ -159,7 +159,7 @@ extension EventEntity {
     static var testEvent2: EventEntity {
         let event = EventEntity()
 
-        event.title = "Viagem em familia para ilha bela"
+        event.title = "Viagem em familia para ilha bela, com parada para ver a migração de baleias"
         event.date = Date() + 2.hours
         event.color = .blue
 

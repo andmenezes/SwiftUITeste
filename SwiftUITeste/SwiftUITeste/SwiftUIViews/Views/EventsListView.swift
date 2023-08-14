@@ -17,12 +17,14 @@ struct EventsListView: View {
         ScrollView {
             VStack {
                 if self.events.count == 0 {
+                    Spacer()
                     
                     Text(self.noEventText)
                         .bold()
                         .multilineTextAlignment(.center)
-                        .padding(.top, 300)
+                        .padding(.top, 200)
                         .padding(.horizontal, 20)
+                    Spacer()
                     
                 } else {
                     ForEach(self.events) { event in
@@ -42,7 +44,7 @@ struct EventsListView: View {
         static var previews: some View {
             Group {
                 EventsListView(events: [EventEntity.testEvent1, EventEntity.testEvent2], noEventText: "teste")
-                EventsListView(events: [], noEventText: "Nada para exibir aqui =(")
+                EventsListView(events: [], noEventText: "Você ainda não tem eventos para acompanhar 😥\nCrie um evento novo ou de uma olhada na aba de descobertas.")
                     .previewDevice("iPhone SE (2nd generation)")
                 
             }

@@ -19,10 +19,6 @@ struct EventDetailRegularView: View {
     
     var body: some View {
         
-        let isDarkMode = colorScheme == .dark
-        let darkBackgroundColor: Color = Color(.systemGray6)
-        let backgroundColor: Color = isDarkMode ? darkBackgroundColor : .white
-        
         if self.deleted {
             Text("Selecione um evento")
         } else {
