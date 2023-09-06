@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UserNotifications
 
 struct EventDetailCompactView: View {
     @Environment(\.colorScheme) var colorScheme
@@ -93,6 +94,7 @@ struct EventDetailCompactView: View {
                     .padding(.vertical, self.verticalSpacing)
                     
                 } else {
+                    
                     Button(action: {
                         showingCreateView = true
                     }) {
@@ -104,6 +106,30 @@ struct EventDetailCompactView: View {
                     .sheet(isPresented: $showingCreateView, content: {
                         CreateNewEventView(event: self.event)
                     })
+                    
+                    //MARK - New Feature Local Notification
+                    
+//                    if let notifyUser = self.event.notifyUser, !notifyUser {
+//                        Button(action: {
+////                            self.addNotification()
+//                        }) {
+//                            EventDetailViewButton(imageSystemName: "bell",
+//                                                  text: "Esse evento já será notificado",
+//                                                  backgroundColor: .green)
+//                        }
+//                        .padding(.vertical, self.verticalSpacing)
+//                        .disabled(true)
+//
+//                    }else {
+//                        Button(action: {
+//                            self.addNotification()
+//                        }) {
+//                            EventDetailViewButton(imageSystemName: "bell",
+//                                                  text: "Notificar",
+//                                                  backgroundColor: .green)
+//                        }
+//                        .padding(.vertical, self.verticalSpacing)
+//                    }
                     
                     Button(action: {
                         DataController.shared.deleteEvent(event: self.event)
@@ -118,6 +144,42 @@ struct EventDetailCompactView: View {
             }
             .navigationBarTitleDisplayMode(.inline)
         }
+    }
+    
+    func checkIfNotificationIsPossible() -> Bool {
+        
+        var hasAuthorization = false
+
+        
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
+            if success {
+                hasAuthorization =  true
+            }
+        }
+        
+        return hasAuthorization
+    }
+    
+    func addNotification() {
+        
+        if checkIfNotificationIsPossible() {
+            let content = UNMutableNotificationContent()
+            content.title = "Você pediu para que te lembrassemos de:"
+            content.subtitle = self.event.title
+            content.sound = UNNotificationSound.default
+
+            // show this notification five seconds from now
+            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: self.event.date.timeIntervalSinceNow, repeats: false)
+
+            // choose a random identifier
+            let request = UNNotificationRequest(identifier: self.event.id, content: content, trigger: trigger)
+
+            // add our notification request
+            UNUserNotificationCenter.current().add(request)
+        }
+        
+        
+        
     }
 }
 

@@ -71,7 +71,6 @@ class DataController: ObservableObject {
                 }
             }
         }
-        
         return []
     }
     
@@ -128,8 +127,5 @@ class DataController: ObservableObject {
                 }
             }.resume()
         }
-            
-            
     }
-    
 }

@@ -18,6 +18,7 @@ class EventEntity: ObservableObject, Identifiable, Codable {
     @Published var url: String = ""
     @Published var color: Color = Color.purple
     @Published var imageData: Data?
+    @Published var notifyUser: Bool?
     
     var hasBeenAdded: Bool {
         let event = DataController.shared.events.first { event in
@@ -49,14 +50,14 @@ class EventEntity: ObservableObject, Identifiable, Codable {
     required init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
 
-        self.id = try values.decode(String.self, forKey: .id)
-        self.date = try values.decode(Date.self, forKey: .date)
-        self.title = try values.decode(String.self, forKey: .title)
+        self.id = try values.decodeIfPresent(String.self, forKey: .id) ?? ""
+        self.date = try values.decodeIfPresent(Date.self, forKey: .date) ?? Date()
+        self.title = try values.decodeIfPresent(String.self, forKey: .title) ?? ""
         self.address = try values.decodeIfPresent(String.self, forKey: .address) ?? ""
-        self.url = try values.decode(String.self, forKey: .url)
-        let hexColor: String = try values.decode(String.self, forKey: .color)
+        self.url = try values.decodeIfPresent(String.self, forKey: .url) ?? ""
+        let hexColor: String = try values.decodeIfPresent(String.self, forKey: .color) ?? "#0000"
         self.color = Color(UIColor(hexColor))
-        self.imageData = try? values.decode(Data.self, forKey: .imageData)
+        self.imageData = try? values.decodeIfPresent(Data.self, forKey: .imageData)
     }
     
     init(json: [String: Any]) {
