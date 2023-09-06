@@ -32,6 +32,14 @@
 		7E86E7E32A74300D00F324E5 /* UIColor_Hex_Swift in Frameworks */ = {isa = PBXBuildFile; productRef = 7E86E7E22A74300D00F324E5 /* UIColor_Hex_Swift */; };
 		7E86E7E42A74302600F324E5 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD33515269CA5B900FD0013 /* DataController.swift */; };
 		7E86E7E52A74302A00F324E5 /* EventEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD781222694E025003D3D9A /* EventEntity.swift */; };
+		7EAFF9C32A8A6B1D000E8FF1 /* MeusEventosWatchIOSAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAFF9C22A8A6B1D000E8FF1 /* MeusEventosWatchIOSAppApp.swift */; };
+		7EAFF9C52A8A6B1D000E8FF1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAFF9C42A8A6B1D000E8FF1 /* ContentView.swift */; };
+		7EAFF9C72A8A6B21000E8FF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EAFF9C62A8A6B21000E8FF1 /* Assets.xcassets */; };
+		7EAFF9CA2A8A6B21000E8FF1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EAFF9C92A8A6B21000E8FF1 /* Preview Assets.xcassets */; };
+		7EAFF9D42A8A6B22000E8FF1 /* MeusEventosWatchIOSApp_Watch_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAFF9D32A8A6B22000E8FF1 /* MeusEventosWatchIOSApp_Watch_AppTests.swift */; };
+		7EAFF9DE2A8A6B22000E8FF1 /* MeusEventosWatchIOSApp_Watch_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAFF9DD2A8A6B22000E8FF1 /* MeusEventosWatchIOSApp_Watch_AppUITests.swift */; };
+		7EAFF9E02A8A6B22000E8FF1 /* MeusEventosWatchIOSApp_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAFF9DF2A8A6B22000E8FF1 /* MeusEventosWatchIOSApp_Watch_AppUITestsLaunchTests.swift */; };
+		7EAFF9E32A8A6B22000E8FF1 /* MeusEventosWatchIOSApp Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 7EAFF9C02A8A6B1D000E8FF1 /* MeusEventosWatchIOSApp Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		7EB4A52E2A7BCB8500E63B71 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EB4A52D2A7BCB8500E63B71 /* Launch Screen.storyboard */; };
 		BC2BE5A7269DB2A5003C57B1 /* EventsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2BE5A6269DB2A5003C57B1 /* EventsListView.swift */; };
 		BC2BE5A9269DBB2C003C57B1 /* PastEventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2BE5A8269DBB2C003C57B1 /* PastEventsView.swift */; };
@@ -59,6 +67,27 @@
 			proxyType = 1;
 			remoteGlobalIDString = 7E86E7CA2A742C4300F324E5;
 			remoteInfo = EventListWidgetiOSExtension;
+		};
+		7EAFF9D02A8A6B21000E8FF1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BCD780E82694D54F003D3D9A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7EAFF9BF2A8A6B1D000E8FF1;
+			remoteInfo = "MeusEventosWatchIOSApp Watch App";
+		};
+		7EAFF9DA2A8A6B22000E8FF1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BCD780E82694D54F003D3D9A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7EAFF9BF2A8A6B1D000E8FF1;
+			remoteInfo = "MeusEventosWatchIOSApp Watch App";
+		};
+		7EAFF9E12A8A6B22000E8FF1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BCD780E82694D54F003D3D9A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7EAFF9BF2A8A6B1D000E8FF1;
+			remoteInfo = "MeusEventosWatchIOSApp Watch App";
 		};
 		BCD781022694D553003D3D9A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -88,6 +117,17 @@
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7EAFF9E72A8A6B22000E8FF1 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				7EAFF9E32A8A6B22000E8FF1 /* MeusEventosWatchIOSApp Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -112,6 +152,16 @@
 		7E86E7D82A742C4900F324E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E86E7E62A7444E600F324E5 /* Meus Eventos.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Meus Eventos.entitlements"; sourceTree = "<group>"; };
 		7E86E7E72A74452900F324E5 /* EventListWidgetiOSExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EventListWidgetiOSExtension.entitlements; sourceTree = "<group>"; };
+		7EAFF9C02A8A6B1D000E8FF1 /* MeusEventosWatchIOSApp Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MeusEventosWatchIOSApp Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EAFF9C22A8A6B1D000E8FF1 /* MeusEventosWatchIOSAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeusEventosWatchIOSAppApp.swift; sourceTree = "<group>"; };
+		7EAFF9C42A8A6B1D000E8FF1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7EAFF9C62A8A6B21000E8FF1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7EAFF9C92A8A6B21000E8FF1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7EAFF9CF2A8A6B21000E8FF1 /* MeusEventosWatchIOSApp Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MeusEventosWatchIOSApp Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EAFF9D32A8A6B22000E8FF1 /* MeusEventosWatchIOSApp_Watch_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeusEventosWatchIOSApp_Watch_AppTests.swift; sourceTree = "<group>"; };
+		7EAFF9D92A8A6B22000E8FF1 /* MeusEventosWatchIOSApp Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MeusEventosWatchIOSApp Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EAFF9DD2A8A6B22000E8FF1 /* MeusEventosWatchIOSApp_Watch_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeusEventosWatchIOSApp_Watch_AppUITests.swift; sourceTree = "<group>"; };
+		7EAFF9DF2A8A6B22000E8FF1 /* MeusEventosWatchIOSApp_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeusEventosWatchIOSApp_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7EB4A52D2A7BCB8500E63B71 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		BC2BE5A6269DB2A5003C57B1 /* EventsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsListView.swift; sourceTree = "<group>"; };
 		BC2BE5A8269DBB2C003C57B1 /* PastEventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastEventsView.swift; sourceTree = "<group>"; };
@@ -145,6 +195,27 @@
 				7E86E7CE2A742C4300F324E5 /* WidgetKit.framework in Frameworks */,
 				7E86E7E32A74300D00F324E5 /* UIColor_Hex_Swift in Frameworks */,
 				7E86E7E12A74300900F324E5 /* SwiftDate in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7EAFF9BD2A8A6B1D000E8FF1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7EAFF9CC2A8A6B21000E8FF1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7EAFF9D62A8A6B22000E8FF1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,6 +315,42 @@
 			path = EventListWidgetiOS;
 			sourceTree = "<group>";
 		};
+		7EAFF9C12A8A6B1D000E8FF1 /* MeusEventosWatchIOSApp Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				7EAFF9C22A8A6B1D000E8FF1 /* MeusEventosWatchIOSAppApp.swift */,
+				7EAFF9C42A8A6B1D000E8FF1 /* ContentView.swift */,
+				7EAFF9C62A8A6B21000E8FF1 /* Assets.xcassets */,
+				7EAFF9C82A8A6B21000E8FF1 /* Preview Content */,
+			);
+			path = "MeusEventosWatchIOSApp Watch App";
+			sourceTree = "<group>";
+		};
+		7EAFF9C82A8A6B21000E8FF1 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				7EAFF9C92A8A6B21000E8FF1 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7EAFF9D22A8A6B22000E8FF1 /* MeusEventosWatchIOSApp Watch AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				7EAFF9D32A8A6B22000E8FF1 /* MeusEventosWatchIOSApp_Watch_AppTests.swift */,
+			);
+			path = "MeusEventosWatchIOSApp Watch AppTests";
+			sourceTree = "<group>";
+		};
+		7EAFF9DC2A8A6B22000E8FF1 /* MeusEventosWatchIOSApp Watch AppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7EAFF9DD2A8A6B22000E8FF1 /* MeusEventosWatchIOSApp_Watch_AppUITests.swift */,
+				7EAFF9DF2A8A6B22000E8FF1 /* MeusEventosWatchIOSApp_Watch_AppUITestsLaunchTests.swift */,
+			);
+			path = "MeusEventosWatchIOSApp Watch AppUITests";
+			sourceTree = "<group>";
+		};
 		BCD3350F269C86AA00FD0013 /* SwiftUIViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -282,6 +389,9 @@
 				BCD781042694D553003D3D9A /* SwiftUITesteTests */,
 				BCD7810F2694D553003D3D9A /* SwiftUITesteUITests */,
 				7E86E7D12A742C4300F324E5 /* EventListWidgetiOS */,
+				7EAFF9C12A8A6B1D000E8FF1 /* MeusEventosWatchIOSApp Watch App */,
+				7EAFF9D22A8A6B22000E8FF1 /* MeusEventosWatchIOSApp Watch AppTests */,
+				7EAFF9DC2A8A6B22000E8FF1 /* MeusEventosWatchIOSApp Watch AppUITests */,
 				7E86E7CC2A742C4300F324E5 /* Frameworks */,
 				BCD780F12694D54F003D3D9A /* Products */,
 			);
@@ -294,6 +404,9 @@
 				BCD781012694D553003D3D9A /* SwiftUITesteTests.xctest */,
 				BCD7810C2694D553003D3D9A /* SwiftUITesteUITests.xctest */,
 				7E86E7CB2A742C4300F324E5 /* EventListWidgetiOSExtension.appex */,
+				7EAFF9C02A8A6B1D000E8FF1 /* MeusEventosWatchIOSApp Watch App.app */,
+				7EAFF9CF2A8A6B21000E8FF1 /* MeusEventosWatchIOSApp Watch AppTests.xctest */,
+				7EAFF9D92A8A6B22000E8FF1 /* MeusEventosWatchIOSApp Watch AppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -367,6 +480,59 @@
 			productReference = 7E86E7CB2A742C4300F324E5 /* EventListWidgetiOSExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		7EAFF9BF2A8A6B1D000E8FF1 /* MeusEventosWatchIOSApp Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7EAFF9E42A8A6B22000E8FF1 /* Build configuration list for PBXNativeTarget "MeusEventosWatchIOSApp Watch App" */;
+			buildPhases = (
+				7EAFF9BC2A8A6B1D000E8FF1 /* Sources */,
+				7EAFF9BD2A8A6B1D000E8FF1 /* Frameworks */,
+				7EAFF9BE2A8A6B1D000E8FF1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MeusEventosWatchIOSApp Watch App";
+			productName = "MeusEventosWatchIOSApp Watch App";
+			productReference = 7EAFF9C02A8A6B1D000E8FF1 /* MeusEventosWatchIOSApp Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7EAFF9CE2A8A6B21000E8FF1 /* MeusEventosWatchIOSApp Watch AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7EAFF9E82A8A6B22000E8FF1 /* Build configuration list for PBXNativeTarget "MeusEventosWatchIOSApp Watch AppTests" */;
+			buildPhases = (
+				7EAFF9CB2A8A6B21000E8FF1 /* Sources */,
+				7EAFF9CC2A8A6B21000E8FF1 /* Frameworks */,
+				7EAFF9CD2A8A6B21000E8FF1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7EAFF9D12A8A6B21000E8FF1 /* PBXTargetDependency */,
+			);
+			name = "MeusEventosWatchIOSApp Watch AppTests";
+			productName = "MeusEventosWatchIOSApp Watch AppTests";
+			productReference = 7EAFF9CF2A8A6B21000E8FF1 /* MeusEventosWatchIOSApp Watch AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7EAFF9D82A8A6B22000E8FF1 /* MeusEventosWatchIOSApp Watch AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7EAFF9EB2A8A6B22000E8FF1 /* Build configuration list for PBXNativeTarget "MeusEventosWatchIOSApp Watch AppUITests" */;
+			buildPhases = (
+				7EAFF9D52A8A6B22000E8FF1 /* Sources */,
+				7EAFF9D62A8A6B22000E8FF1 /* Frameworks */,
+				7EAFF9D72A8A6B22000E8FF1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7EAFF9DB2A8A6B22000E8FF1 /* PBXTargetDependency */,
+			);
+			name = "MeusEventosWatchIOSApp Watch AppUITests";
+			productName = "MeusEventosWatchIOSApp Watch AppUITests";
+			productReference = 7EAFF9D92A8A6B22000E8FF1 /* MeusEventosWatchIOSApp Watch AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		BCD780EF2694D54F003D3D9A /* Meus Eventos */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BCD781152694D553003D3D9A /* Build configuration list for PBXNativeTarget "Meus Eventos" */;
@@ -375,11 +541,13 @@
 				BCD780ED2694D54F003D3D9A /* Frameworks */,
 				BCD780EE2694D54F003D3D9A /* Resources */,
 				7E86E7DF2A742C4900F324E5 /* Embed Foundation Extensions */,
+				7EAFF9E72A8A6B22000E8FF1 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				7E86E7DA2A742C4900F324E5 /* PBXTargetDependency */,
+				7EAFF9E22A8A6B22000E8FF1 /* PBXTargetDependency */,
 			);
 			name = "Meus Eventos";
 			packageProductDependencies = (
@@ -439,6 +607,17 @@
 					7E86E7CA2A742C4300F324E5 = {
 						CreatedOnToolsVersion = 14.3;
 					};
+					7EAFF9BF2A8A6B1D000E8FF1 = {
+						CreatedOnToolsVersion = 14.3;
+					};
+					7EAFF9CE2A8A6B21000E8FF1 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 7EAFF9BF2A8A6B1D000E8FF1;
+					};
+					7EAFF9D82A8A6B22000E8FF1 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 7EAFF9BF2A8A6B1D000E8FF1;
+					};
 					BCD780EF2694D54F003D3D9A = {
 						CreatedOnToolsVersion = 12.5;
 					};
@@ -473,6 +652,9 @@
 				BCD781002694D553003D3D9A /* SwiftUITesteTests */,
 				BCD7810B2694D553003D3D9A /* SwiftUITesteUITests */,
 				7E86E7CA2A742C4300F324E5 /* EventListWidgetiOSExtension */,
+				7EAFF9BF2A8A6B1D000E8FF1 /* MeusEventosWatchIOSApp Watch App */,
+				7EAFF9CE2A8A6B21000E8FF1 /* MeusEventosWatchIOSApp Watch AppTests */,
+				7EAFF9D82A8A6B22000E8FF1 /* MeusEventosWatchIOSApp Watch AppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -483,6 +665,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E86E7D72A742C4900F324E5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7EAFF9BE2A8A6B1D000E8FF1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EAFF9CA2A8A6B21000E8FF1 /* Preview Assets.xcassets in Resources */,
+				7EAFF9C72A8A6B21000E8FF1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7EAFF9CD2A8A6B21000E8FF1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7EAFF9D72A8A6B22000E8FF1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -524,6 +729,32 @@
 				7E86E7D32A742C4300F324E5 /* EventListWidgetiOSBundle.swift in Sources */,
 				7E86E7E52A74302A00F324E5 /* EventEntity.swift in Sources */,
 				7E827BA02A781CA700E2095B /* UIImageExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7EAFF9BC2A8A6B1D000E8FF1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EAFF9C52A8A6B1D000E8FF1 /* ContentView.swift in Sources */,
+				7EAFF9C32A8A6B1D000E8FF1 /* MeusEventosWatchIOSAppApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7EAFF9CB2A8A6B21000E8FF1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EAFF9D42A8A6B22000E8FF1 /* MeusEventosWatchIOSApp_Watch_AppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7EAFF9D52A8A6B22000E8FF1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EAFF9DE2A8A6B22000E8FF1 /* MeusEventosWatchIOSApp_Watch_AppUITests.swift in Sources */,
+				7EAFF9E02A8A6B22000E8FF1 /* MeusEventosWatchIOSApp_Watch_AppUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -581,6 +812,21 @@
 			target = 7E86E7CA2A742C4300F324E5 /* EventListWidgetiOSExtension */;
 			targetProxy = 7E86E7D92A742C4900F324E5 /* PBXContainerItemProxy */;
 		};
+		7EAFF9D12A8A6B21000E8FF1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7EAFF9BF2A8A6B1D000E8FF1 /* MeusEventosWatchIOSApp Watch App */;
+			targetProxy = 7EAFF9D02A8A6B21000E8FF1 /* PBXContainerItemProxy */;
+		};
+		7EAFF9DB2A8A6B22000E8FF1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7EAFF9BF2A8A6B1D000E8FF1 /* MeusEventosWatchIOSApp Watch App */;
+			targetProxy = 7EAFF9DA2A8A6B22000E8FF1 /* PBXContainerItemProxy */;
+		};
+		7EAFF9E22A8A6B22000E8FF1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7EAFF9BF2A8A6B1D000E8FF1 /* MeusEventosWatchIOSApp Watch App */;
+			targetProxy = 7EAFF9E12A8A6B22000E8FF1 /* PBXContainerItemProxy */;
+		};
 		BCD781032694D553003D3D9A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = BCD780EF2694D54F003D3D9A /* Meus Eventos */;
@@ -615,7 +861,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.SwiftUITeste.EventListWidgetiOS;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andmenezes.eventList.WidgetiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -645,12 +891,160 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.SwiftUITeste.EventListWidgetiOS;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andmenezes.eventList.WidgetiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7EAFF9E52A8A6B22000E8FF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MeusEventosWatchIOSApp Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 9YPJ8Q5GZ7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = MeusEventosWatchIOSApp;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.andmenezes.eventList;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andmenezes.eventList.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.4;
+			};
+			name = Debug;
+		};
+		7EAFF9E62A8A6B22000E8FF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MeusEventosWatchIOSApp Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 9YPJ8Q5GZ7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = MeusEventosWatchIOSApp;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.andmenezes.eventList;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andmenezes.eventList.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.4;
+			};
+			name = Release;
+		};
+		7EAFF9E92A8A6B22000E8FF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9YPJ8Q5GZ7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.andmenezes.eventList.watchkitapp-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MeusEventosWatchIOSApp Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MeusEventosWatchIOSApp Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 9.4;
+			};
+			name = Debug;
+		};
+		7EAFF9EA2A8A6B22000E8FF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9YPJ8Q5GZ7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.andmenezes.eventList.watchkitapp-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MeusEventosWatchIOSApp Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MeusEventosWatchIOSApp Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 9.4;
+			};
+			name = Release;
+		};
+		7EAFF9EC2A8A6B22000E8FF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9YPJ8Q5GZ7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.andmenezes.eventList.WatchIOSApp-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "MeusEventosWatchIOSApp Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 9.4;
+			};
+			name = Debug;
+		};
+		7EAFF9ED2A8A6B22000E8FF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9YPJ8Q5GZ7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.andmenezes.eventList.WatchIOSApp-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "MeusEventosWatchIOSApp Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 9.4;
 			};
 			name = Release;
 		};
@@ -788,7 +1182,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.SwiftUITeste;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andmenezes.eventList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -813,7 +1207,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.SwiftUITeste;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andmenezes.eventList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -825,7 +1219,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9YPJ8Q5GZ7;
 				INFOPLIST_FILE = SwiftUITesteTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -833,7 +1229,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.SwiftUITesteTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andmenezes.eventList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -846,7 +1242,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9YPJ8Q5GZ7;
 				INFOPLIST_FILE = SwiftUITesteTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -854,7 +1252,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.SwiftUITesteTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andmenezes.eventList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -873,7 +1271,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.SwiftUITesteUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andmenezes.eventListUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -892,7 +1290,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.SwiftUITesteUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andmenezes.eventListUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -908,6 +1306,33 @@
 			buildConfigurations = (
 				7E86E7DD2A742C4900F324E5 /* Debug */,
 				7E86E7DE2A742C4900F324E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7EAFF9E42A8A6B22000E8FF1 /* Build configuration list for PBXNativeTarget "MeusEventosWatchIOSApp Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EAFF9E52A8A6B22000E8FF1 /* Debug */,
+				7EAFF9E62A8A6B22000E8FF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7EAFF9E82A8A6B22000E8FF1 /* Build configuration list for PBXNativeTarget "MeusEventosWatchIOSApp Watch AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EAFF9E92A8A6B22000E8FF1 /* Debug */,
+				7EAFF9EA2A8A6B22000E8FF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7EAFF9EB2A8A6B22000E8FF1 /* Build configuration list for PBXNativeTarget "MeusEventosWatchIOSApp Watch AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EAFF9EC2A8A6B22000E8FF1 /* Debug */,
+				7EAFF9ED2A8A6B22000E8FF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
